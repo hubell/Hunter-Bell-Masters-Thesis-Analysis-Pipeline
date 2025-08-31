@@ -1,0 +1,905 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="OJK" />
+    <meta name="description" content="Sustainable Finance OJK">
+    <!-- Document title -->
+    <title>Sustainable Finance OJK</title>
+    <link rel="shortcut icon" href="/keuanganberkelanjutan/assets/images/logo/SF_thumbnail.svg" type="img/x-icon" />
+    <!-- Stylesheets & Fonts -->
+    <link href='/keuanganberkelanjutan/assets/plugins/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+    <link href="/keuanganberkelanjutan/assets/css/style.css" rel="stylesheet">
+    <link href="/keuanganberkelanjutan/assets/css/plugins.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/keuanganberkelanjutan/assets/css/content-styles.css" type="text/css">
+    <link rel="stylesheet" href="/keuanganberkelanjutan/assets/css/timeline.css" type="text/css">
+    <link href="/keuanganberkelanjutan/assets/plugins/select2/css/select2.css" rel="stylesheet" />
+    <link href="/keuanganberkelanjutan/assets/css/components.css" rel="stylesheet" id="component1" />
+    <link href="/keuanganberkelanjutan/assets/css/components.min.css" rel="stylesheet" id="component2" />
+    <link href="/keuanganberkelanjutan/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/keuanganberkelanjutan/assets/css/bootstrap_limitless.min.css" rel="stylesheet" />
+    <link href="/keuanganberkelanjutan/assets/css/custom.css" rel="stylesheet" />
+
+    <style media="print">
+        .accordion * {
+            display: none;
+        }
+
+        #calendar {
+            display: block;
+        }
+
+        .customheight {
+            height: 54px;
+        }
+    </style>
+    <style>
+        .hover-red {
+            border: 1px solid transparent !important; /* Mengatur border transparan pada panel berita */
+            transition: border-color 0.3s ease !important; /* Efek transisi untuk perubahan warna border */
+        }
+
+            .hover-red:hover {
+                border-color: red !important; /* Mengatur warna border menjadi merah saat hover */
+                box-shadow: 0 0 10px white; /* Menambahkan efek bayangan merah saat hover */
+                transition: box-shadow 0.3s ease; /* Efek transisi untuk perubahan bayangan */
+            }
+
+                .s:hover .post-meta-date,
+                .hover-red:hover .post-meta-comments,
+                .hover-red:hover h2 {
+                    color: red !important; /* Mengatur warna teks menjadi merah saat hover */
+                }
+
+        .post-item {
+            padding: 0px !important;
+        }
+
+            .post-item .post-item-description {
+                line-height: 1.5385;
+            }
+    </style>
+    <style>
+        .post-item.border > .post-item-wrap > .post-item-description {
+            padding: 0px !important;
+        }
+
+        .tag {
+            /*border: 1px solid #dc3545;*/
+            border-radius: 8px;
+            padding: 6px;
+        }
+
+        .fc-day-header {
+            background-color: #C52027;
+            color: white;
+        }
+
+        .size-15 {
+            font-size: 15px
+        }
+
+        .size-13 {
+            font-size: 13px
+        }
+
+        .size-14 {
+            font-size: 14px
+        }
+
+        .badge-light {
+            color: #911111;
+            /*background-color: #fafafa;*/
+        }
+
+        #DataTables_Table_0_wrapper {
+            height: 1px;
+        }
+
+        input:not([type="checkbox"]):not([type="radio"]), select {
+            min-height: 25px !important;
+        }
+    </style>
+    <script src="/keuanganberkelanjutan/assets/js/jquery.js"></script>
+
+
+    <script src="/keuanganberkelanjutan/assets/plugins/jquery-validation/lib/jquery-3.4.0.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/jquery-validation/lib/jquery-3.4.0.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/slick.js"></script>
+    <script type="text/javascript">
+        var baseurl = '/keuanganberkelanjutan/id/';
+        var baseurllang = '/keuanganberkelanjutan/id/';
+        var issecure = (window.location.protocol == 'https:')
+        if(issecure){
+            baseurl = baseurl.replace("http:","https:");
+            baseurllang = baseurllang.replace("http:","https:");
+        }
+        var lang = 'id';
+    </script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/highchart/grouped-categories.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/moment/moment.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/popper/popper.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/newdatatables/datatables.min.js"></script>
+
+    <script src="/keuanganberkelanjutan/assets/plugins/newdatatables/custom_datatables.js"></script>
+
+
+
+
+
+</head>
+<body>
+    
+    <div class="body-inner">
+        <!-- Header -->
+        <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
+            <div class="header-inner">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="/keuanganberkelanjutan/id/">
+                            <span class="logo-default"><img src="/keuanganberkelanjutan/assets/images/logo/SF_Logo.svg" alt="" style="width: 150px"></span>
+                            <span class="logo-dark"><img src="/keuanganberkelanjutan/assets/images/logo/SF_Logo_dark.png" alt="" style="width: 150px"></span>
+                        </a>
+                    </div>
+                    <!--End: Logo-->
+                    <!-- Search -->
+                    <div id="search">
+                        <a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x" style="font-family: inspiro-icons !important; font-style: normal;"></i></a>
+                        <form class="search-form">
+                            <input class="form-control" id="searchglobal" type="search" placeholder="Type & Search..." />
+                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+                            <script>
+                                $("#btncariglobal").click(function () {
+                                    if ($("#searchglobal").val() != null && $("#searchglobal").val() != "") {
+                                        //window.location.href = "/id/content/search?searchfor=" + $("#searchglobal").val();
+                                        window.location.href = "" + baseurl + "/content/search?searchfor=" + $("#searchglobal").val();
+                                    }
+                                });
+                                $("#searchglobal").on('keyup', function (e) {
+                                    if (e.key === 'Enter' || e.keyCode === 13) {
+                                        if ($("#searchglobal").val() != null && $("#searchglobal").val() != "") {
+                                            window.location.href = "" + baseurl + "/content/search?searchfor=" + $("#searchglobal").val();
+                                        }
+                                    }
+                                });
+                            </script>
+                        </form>
+                    </div>
+                    <!-- end: search -->
+                    <!--Header Extras-->
+                    <div class="header-extras">
+                        <ul>
+                            <li><a id="btn-search" href="#"> <i class="icon-search" style="font-family: inspiro-icons !important; font-style: normal;"></i></a></li><li><div class="p-dropdown"><a href="javascript:void(0)"><i class="icon-globe" style="font-family: inspiro-icons !important; font-style: normal;"></i><span>ID</span></a><ul class="p-dropdown-content"><li><a href="http://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/home">Indonesia</a></li><li><a href="http://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/en/home">English</a></li></ul></div></li>
+                        </ul>
+                    </div>
+                    <!--end: Header Extras-->
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <a class="lines-button x"><span class="lines"></span></a>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+                    <!--Navigation-->
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/">Beranda</a></li><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/about">Tentang</a></li><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/regulation/index">Peraturan</a></li><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/agenda/index">Agenda</a></li><li class="dropdown"><a href="javascript:void(0);">Publikasi</a><ul class="dropdown-menu"><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/publication/publicationsflibrary"> SF Library</a></li><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/articleriset"> Artikel dan Riset</a></li><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/newsmedia/pressconference"> Siaran Pers</a></li><li><a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/newsmedia/news"> Berita</a></li></ul></li></ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--end: Navigation-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+        
+
+        
+
+
+
+<!-- Slider OJK -->
+<div id="slider" class="inspiro-slider slider-fullscreen dots-creative">
+            <!-- Slide 1 -->
+                <div class="slide kenburns" data-bg-image="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/Uploads/Slider/Slider_21082209041514.jpg">
+                    <div class="bg-overlay"></div>
+                    <div class="container">
+                        <div class="slide-captions text-center text-light">
+                            <!-- Captions -->
+                            <h2>Keuangan Berkelanjutan</h2>
+                            <p>"Keuangan Berkelanjutan adalah sebuah ekosistem dengan dukungan menyeluruh berupa kebijakan, regulasi, norma, standar, produk, transaksi, dan jasa keuangan yang menyelaraskan kepentingan ekonomi, lingkungan hidup, dan sosial dalam pembiayaan kegiatan berkelanjutan dan pembiayaan transisi menuju pertumbuhan ekonomi yang berkelanjutan."</p>
+                            <!-- end: Captions -->
+                        </div>
+                    </div>
+                </div>
+            <!-- end: Slide 1 -->
+            <!-- Slide 1 -->
+                <div class="slide kenburns" data-bg-video="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/Uploads/Slider/Slider_24021619440314.mp4">
+                    <div class="bg-overlay"></div>
+                    <div class="container">
+                        <div class="slide-captions text-center text-light">
+                            <!-- Captions -->
+                            <h2>Sektor Jasa Keuangan</h2>
+                            <p>"Sektor Jasa Keuangan memiliki peranan penting dalam mendorong pertumbuhan ekonomi yang berkelanjutan di Indonesia."</p>
+                            <!-- end: Captions -->
+                        </div>
+                    </div>
+                </div>
+            <!-- end: Slide 1 -->
+            <!-- Slide 1 -->
+                <div class="slide kenburns" data-bg-video="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/Uploads/Slider/Slider_24021620191668.mp4">
+                    <div class="bg-overlay"></div>
+                    <div class="container">
+                        <div class="slide-captions text-center text-light">
+                            <!-- Captions -->
+                            <h2>Peluang Bisnis Berkelanjutan</h2>
+                            <p>"Semakin meningkatnya kesadaran dan tuntutan dalam implementasi LST menciptakan peluang bisnis bagi pelaku usaha."</p>
+                            <!-- end: Captions -->
+                        </div>
+                    </div>
+                </div>
+            <!-- end: Slide 1 -->
+            <!-- Slide 1 -->
+                <div class="slide kenburns" data-bg-video="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/Uploads/Slider/Slider_24021619582512.mp4">
+                    <div class="bg-overlay"></div>
+                    <div class="container">
+                        <div class="slide-captions text-center text-light">
+                            <!-- Captions -->
+                            <h2>OJK Berkomitmen Mendukung Keuangan Berkelanjutan di Indonesia</h2>
+                            <p>"OJK memegang komitmen jangka panjang terhadap Sustainable Finance untuk memastikan kelancaran transisi menuju ekonomi rendah karbon. OJK terus mendukung komitmen Pemerintah Indonesia terhadap Perjanjian Paris serta langkah negara untuk mencapai tujuan Net Zero Emission"</p>
+                            <!-- end: Captions -->
+                        </div>
+                    </div>
+                </div>
+            <!-- end: Slide 1 -->
+            <!-- Slide 1 -->
+                <div class="slide kenburns" data-bg-video="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/Uploads/Slider/Slider_24021618385110.mp4">
+                    <div class="bg-overlay"></div>
+                    <div class="container">
+                        <div class="slide-captions text-center text-light">
+                            <!-- Captions -->
+                            <h2>Inisiatif OJK</h2>
+                            <p>"OJK telah mengeluarkan berbagai inisiatif yang bertujuan meningkatkan pemahaman serta kapasitas pelaku sektor jasa keuangan untuk beralih menuju ekonomi rendah karbon."</p>
+                            <!-- end: Captions -->
+                        </div>
+                    </div>
+                </div>
+            <!-- end: Slide 1 -->
+
+    <!-- Slide 1 -->
+    
+    <!-- end: Slide 1 -->
+</div>
+<!--end: Slider OJK -->
+<!-- ROADMAP KEUANGAN BERKELANJUTAN -->
+
+<!-- end: ROADMAP KEUANGAN BERKELANJUTAN -->
+
+<div id="slider" class="inspiro-slider slider-halfscreen dots-creative slider-fullscreen">
+    <!-- Slide 1 -->
+        <div class="slide background-image" style="background-image:url('https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/assets/images/white-bg.png');">
+            
+            <div class="container" style="padding-top:70px">
+                <div class="heading-text heading-section text-center m-b-0" data-animate="fadeInUp">
+                    <h2>Taksonomi untuk Keuangan Berkelanjutan Indonesia (TKBI) Versi 2</h2>
+                    
+                    
+                </div>
+                <div class="row" data-animate="fadeInUp" style="margin-top:60px;">
+                    <div class="col-lg-6">
+                        <p class="lead text-justify" style="min-height:140px; padding-top:15px;">OJK senantiasa mendukung komitmen Net Zero Emission (NZE) dan Tujuan Pembangunan Berkelanjutan yang ditetapkan oleh Pemerintah Republik Indonesia. Melanjutkan penerbitan Taksonomi untuk Keuangan Berkelanjutan Indonesia (TKBI) versi 1 pada Februari 2024 dan ASEAN Taxonomy for Sustainable Finance&amp;nbsp;(ATSF) version 3 pada 27 Maret 2024, pada 11 Februari 2025 OJK menerbitkan TKBI versi 2. TKBI merupakan kebijakan bersama, hasil kolaborasi dan sinergi lintas kementerian/lembaga dan pemangku kepentingan terkait untuk memajukan penerapan keuangan berkelanjutan di Indonesia.</p><br />
+                            <a href="http://gapura.ojk.go.id/tkbi2025" class="btn btn-danger mt-2" target="_blank">BACA LEBIH LANJUT</a>
+                    </div>
+                    <div class="col-lg-6 text-center" style="min-height:300px">
+                        <img class="text-center img-fluid" src="/keuanganberkelanjutan/Uploads/Slider/Slider_25021100462421.jpg" alt="Image" style="padding-left: 4px; padding-top:20px; max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide background-image" style="background-image:url('https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/assets/images/white-bg.png');">
+            
+            <div class="container" style="padding-top:70px">
+                <div class="heading-text heading-section text-center m-b-0" data-animate="fadeInUp">
+                    <h2>Taksonomi untuk Keuangan Berkelanjutan Indonesia 2024</h2>
+                    
+                    
+                </div>
+                <div class="row" data-animate="fadeInUp" style="margin-top:60px;">
+                    <div class="col-lg-6">
+                        <p class="lead text-justify" style="min-height:140px; padding-top:15px;">Sebagai respon dari dinamika dan perkembangan keuangan berkelanjutan nasional dan internasional serta menjawab berbagai tantangan penanganan dan pembiayaan perubahan iklim, implementasi transisi menuju Net Zero Emission&#160;serta upaya mencapai Tujuan Pembangunan Berkelanjutan (TPB)/SDGs, OJK menerbitkan Taksonomi untuk Keuangan Berkelanjutan Indonesia (TKBI),&#160;yang merupakan transformasi dari Taksonomi Hijau Indonesia Edisi 1.0. TKBI&#160;merupakan klasifikasi aktivitas ekonomi yang mendukung upaya dan&#160;TPB/SDGs yang mencakup&#160;aspek&#160;ekonomi, lingkungan hidup, dan sosial, serta digunakan sebagai panduan untuk meningkatkan alokasi modal dan pembiayaan berkelanjutan dalam mendukung pencapaian target NZE Indonesia tahun 2060 atau lebih awal.</p><br />
+                            <a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/newsmedia/detailpressconference/3373/taksonomi-untuk-keuangan-berkelanjutan-indonesia" class="btn btn-danger mt-2" target="_blank">BACA LEBIH LANJUT</a>
+                    </div>
+                    <div class="col-lg-6 text-center" style="min-height:300px">
+                        <img class="text-center img-fluid" src="/keuanganberkelanjutan/Uploads/Slider/Slider_24031408075884.jpg" alt="Image" style="padding-left: 4px; padding-top:20px; max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide background-image" style="background-image:url('https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/assets/images/white-bg.png');">
+            
+            <div class="container" style="padding-top:70px">
+                <div class="heading-text heading-section text-center m-b-0" data-animate="fadeInUp">
+                    <h2>Panduan Climate Risk Stress Testing (CRST) Perbankan</h2>
+                    
+                    
+                </div>
+                <div class="row" data-animate="fadeInUp" style="margin-top:60px;">
+                    <div class="col-lg-6">
+                        <p class="lead text-justify" style="min-height:140px; padding-top:15px;">Dalam rangka mewujudkan komitmen Net Zero Emission, LJK diharapkan dapat berkontribusi pada transisi menuju ekonomi rendah karbon. Komitmen ini dapat diawali dengan peningkatan kemampuan bank mengidentifikasi risiko dan peluang perubahan iklim serta menghindari praktik greenwashing baik oleh bank maupun stakeholder-nya. Panduan ini disusun dalam rangka initial phase Climate Risk Stress Testing (CRST) 2023 secara bottom-up pada bank yang termasuk dalam Task Force Climate Related Financial Risk OJK.</p><br />
+                            <a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/newsmedia/detailpressconference/3398/panduan-climate-risk-stress-testing-perbankan" class="btn btn-danger mt-2" target="_blank">BACA LEBIH LANJUT</a>
+                    </div>
+                    <div class="col-lg-6 text-center" style="min-height:300px">
+                        <img class="text-center img-fluid" src="/keuanganberkelanjutan/Uploads/Slider/Slider_24031413032533.jpg" alt="Image" style="padding-left: 4px; padding-top:20px; max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide background-image" style="background-image:url('https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/assets/images/white-bg.png');">
+            
+            <div class="container" style="padding-top:70px">
+                <div class="heading-text heading-section text-center m-b-0" data-animate="fadeInUp">
+                    <h2>Publikasi Taksonomi Hijau Indonesia Edisi 1.0</h2>
+                    
+                    
+                </div>
+                <div class="row" data-animate="fadeInUp" style="margin-top:60px;">
+                    <div class="col-lg-6">
+                        <p class="lead text-justify" style="min-height:140px; padding-top:15px;">Keberlanjutan telah menjadi salah satu pertimbangan utama dalam setiap pembiayaan / investasi di sektor keuangan. Namun demikian, dibutuhkan konvergensi terminologi bagi pelaku pasar dan pemangku kepentingan yang lebih luas. Salah satu tujuan dari kebijakan keuangan berkelanjutan adalah memastikan bahwa seluruh SJK dan pemangku kepentingan menggunakan kosakata umum dan transparan mengenai terminologi di keuangan berkelanjutan. Hal ini menjadi kontribusi yang terukur terhadap upaya berkelanjutan lainnya di SJK untuk mengembangkan istilah dan definisi utama dalam keuangan berkelanjutan. </p><br />
+                            <a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/publication/detailsflibrary/2352/taksonomi-hijau-indonesia-edisi-1-0-2022" class="btn btn-danger mt-2" target="_blank">BACA LEBIH LANJUT</a>
+                    </div>
+                    <div class="col-lg-6 text-center" style="min-height:300px">
+                        <img class="text-center img-fluid" src="/keuanganberkelanjutan/Uploads/Slider/Slider_22012614423755.jpg" alt="Image" style="padding-left: 4px; padding-top:20px; max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide background-image" style="background-image:url('https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/assets/images/white-bg.png');">
+            
+            <div class="container" style="padding-top:70px">
+                <div class="heading-text heading-section text-center m-b-0" data-animate="fadeInUp">
+                    <h2>ASEAN Taxonomy Board menerbitkan ASEAN Taxonomy for Sustainable Finance Version 2</h2>
+                    
+                    
+                </div>
+                <div class="row" data-animate="fadeInUp" style="margin-top:60px;">
+                    <div class="col-lg-6">
+                        <p class="lead text-justify" style="min-height:140px; padding-top:15px;">ASEAN Taxonomy for Sustainable Finance version 2 (ATSF v2)&#160;memuat penyelesaian Foundation Framework yang berisi metodologi terperinci terdiri dari decision trees&#160;dan guiding questions untuk seluruh tujuan lingkungan/environmental objectives (EO) dan kriteria esensial/essential criteria (EC) untuk menilai suatu aktivitas ekonomi, serta dilengkapi dengan berbagai use cases penggunaan taksonomi. ATSF v2 juga memuat Plus Standard dengan pengembangan Technical Screening Criteria (TSC) untuk focus sector pertama yaitu sektor energi. Plus Standard mengklasifikasikan suatu aktivitas menjadi Green, Amber Tier 2 dan Amber Tier 3. Green tier diselaraskan dengan taksonomi internasional lainnya dan mengacu pada target Perjanjian Paris (1,5 derajat…</p><br />
+                            <a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/newsmedia/detailpressconference/3199/asean-taxonomy-board-menerbitkan-asean-taxonomy-for-sustainable-finance-version-2-untuk-mendukung-transisi-berkelanjutan-di-asean" class="btn btn-danger mt-2" target="_blank">BACA LEBIH LANJUT</a>
+                    </div>
+                    <div class="col-lg-6 text-center" style="min-height:300px">
+                        <img class="text-center img-fluid" src="/keuanganberkelanjutan/Uploads/Slider/Slider_23041010262250.jpg" alt="Image" style="padding-left: 4px; padding-top:20px; max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide background-image" style="background-image:url('https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/be/assets/images/white-bg.png');">
+            
+            <div class="container" style="padding-top:70px">
+                <div class="heading-text heading-section text-center m-b-0" data-animate="fadeInUp">
+                    <h2>ASEAN Taxonomy Board menerbitkan ASEAN Taxonomy for Sustainable Finance Version 3</h2>
+                    
+                    
+                </div>
+                <div class="row" data-animate="fadeInUp" style="margin-top:60px;">
+                    <div class="col-lg-6">
+                        <p class="lead text-justify" style="min-height:140px; padding-top:15px;">Taksonomi ASEAN Versi 3 memperkenalkan TSC yang berfokus pada dua sektor yaitu Transportation &amp; Storage (T&amp;S) dan Construction &amp; Real Estate (C&amp;RE). Kedua sektor ini mencakup aktivitas seperti konstruksi dan renovasi bangunan, pembongkaran dan persiapan lokasi, dan akuisisi dan kepemilikan bangunan, serta transportasi perkotaan dan angkutan barang, dan infrastruktur untuk transportasi darat, air, dan udara. ASEAN Versi 3 ini akan memberikan kejelasan yang lebih baik bagi para pengguna Taksonomi ASEAN. Selanjutnya, sesuai dengan aspirasi ASEAN untuk memfasilitasi transisi yang adil dan teratur, Taksonomi ASEAN akan terus ditinjau dan diperbarui sejalan dengan perkembangan teknologi, ilmu pengetahuan, dan ekonomi yang terus berkembang.…</p><br />
+                            <a href="https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/id/newsmedia/detailpressconference/3481/asean-taxonomy-board-atb-menerbitkan-asean-taxonomy-for-sustainable-finance-version-3-untuk-sektor-transportation-storage-dan-construction-real-estate" class="btn btn-danger mt-2" target="_blank">BACA LEBIH LANJUT</a>
+                    </div>
+                    <div class="col-lg-6 text-center" style="min-height:300px">
+                        <img class="text-center img-fluid" src="/keuanganberkelanjutan/Uploads/Slider/Slider_24040108275194.png" alt="Image" style="padding-left: 4px; padding-top:20px; max-height: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- end: Slide 1 -->
+</div>
+
+
+<!-- Statistik -->
+
+<!-- END Statistik -->
+<!-- BERITA -->
+<section style="background-color:#9E1F22;">
+    <div class="container">
+        <div class="heading-text heading-section text-center" data-animate="fadeInDown">
+            <h2 class="white" style="color:white;">Berita</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="carousel" data-items="4">
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3828/taksonomi-untuk-keuangan-berkelanjutan-indonesia-tkbi-versi-2">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_25021100394803.jpg">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>09 Juli 2025</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3828/taksonomi-untuk-keuangan-berkelanjutan-indonesia-tkbi-versi-2">
+                                        Taksonomi untuk Keuangan Berkelanjutan Indonesia (TKBI) Versi 2
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="" style="color: #C2C2C2; " target="_blank"> </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3704/petunjuk-teknis-bagi-perusahaan-pembiayaan-dan-perusahaan-pembiayaan-syariah-terkait-implementasi-pojk-nomor-51-pojk-03-2017-tentang-penerapan-keuangan-berkelanjutan-bagi-ljk-emiten-dan-perusahaan-publik">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_25011614405239.JPG">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>31 Desember 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3704/petunjuk-teknis-bagi-perusahaan-pembiayaan-dan-perusahaan-pembiayaan-syariah-terkait-implementasi-pojk-nomor-51-pojk-03-2017-tentang-penerapan-keuangan-berkelanjutan-bagi-ljk-emiten-dan-perusahaan-publik">
+                                        Petunjuk Teknis Bagi Perusahaan Pembiayaan Dan Perusahaan Pembiayaan…
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="" style="color: #C2C2C2; " target="_blank"> </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3653/pilot-project-implementasi-taksonomi-hijau-indonesia-dan-taksonomi-untuk-keuangan-berkelanjutan-indonesia">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_24082409363270.jpg">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>29 Agustus 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3653/pilot-project-implementasi-taksonomi-hijau-indonesia-dan-taksonomi-untuk-keuangan-berkelanjutan-indonesia">
+                                        Pilot Project Implementasi Taksonomi Hijau Indonesia dan Taksonomi…
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="" style="color: #C2C2C2; " target="_blank"> </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3618/sosialisasi-taksonomi-untuk-keuangan-berkelanjutan-indonesia">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_24050401320451.png">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>07 Mei 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3618/sosialisasi-taksonomi-untuk-keuangan-berkelanjutan-indonesia">
+                                        Sosialisasi Taksonomi untuk Keuangan Berkelanjutan Indonesia
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="" style="color: #C2C2C2; " target="_blank"> </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3616/sosialisasi-taksonomi-untuk-keuangan-berkelanjutan-indonesia">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_24050209092208.jpeg">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>02 Mei 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3616/sosialisasi-taksonomi-untuk-keuangan-berkelanjutan-indonesia">
+                                        Sosialisasi Taksonomi untuk Keuangan Berkelanjutan Indonesia
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="" style="color: #C2C2C2; " target="_blank"> </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3615/penguatan-implementasi-keuangan-berkelanjutan-indonesia">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_22061015093478.JPG">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>02 Mei 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3615/penguatan-implementasi-keuangan-berkelanjutan-indonesia">
+                                        Penguatan Implementasi Keuangan Berkelanjutan Indonesia
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="https://www.youtube.com/watch?v=8IevRxuTSug" style="color: #C2C2C2; " target="_blank"> Penguatan Implementasi Keuangan Berkelanjutan…</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3614/fintalk-dukung-keuangan-berkelanjutan-ojk-dorong-implementasi-taksonomi-hijau">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_22061015250735.JPG">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>02 Mei 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3614/fintalk-dukung-keuangan-berkelanjutan-ojk-dorong-implementasi-taksonomi-hijau">
+                                        Fintalk : Dukung Keuangan Berkelanjutan OJK Dorong Implementasi…
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="https://www.youtube.com/watch?v=UAFib5paVbs&amp;t=1147s" style="color: #C2C2C2; " target="_blank"> Financial Talk Dukung Keuangan Berkelanjutan…</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3613/peluncuran-taksonomi-hijau-indonesia-edisi-1-0-tahun-2022">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_22012011113734.jpeg">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>02 Mei 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3613/peluncuran-taksonomi-hijau-indonesia-edisi-1-0-tahun-2022">
+                                        Peluncuran Taksonomi HIjau Indonesia Edisi 1.0 Tahun 2022
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="https://www.ojk.go.id/keuanganberkelanjutan/en/" style="color: #C2C2C2; " target="_blank"> Video Peluncuran Taksonomi Hijau Indonesia</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3612/focus-group-discussion-fgd-kick-off-pengembangan-taksonomi-untuk-keuangan-berkelanjutan-indonesia-ndc-related-sector-lanjutan">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_24032916002280.png">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>29 Maret 2024</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3612/focus-group-discussion-fgd-kick-off-pengembangan-taksonomi-untuk-keuangan-berkelanjutan-indonesia-ndc-related-sector-lanjutan">
+                                        Focus Group Discussion (FGD) “Kick Off Pengembangan Taksonomi untuk…
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="" style="color: #C2C2C2; " target="_blank"> </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+                    <!-- Post item-->
+                    <div class="post-item hover-red">
+                        <div class="post-item-wrap">
+                            <div class="post-image">
+                                <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3208/permintaan-tanggapan-publik-atas-konsep-consultative-paper-taksonomi-berkelanjutan-indonesia">
+                                    <img alt="" src="/keuanganberkelanjutan/Dokumen/beritaInternasional/BeritaInternasional_23111412341177.jpg">
+                                </a>
+                            </div>
+                            <div class="post-item-description">
+                                    <span class="post-meta-date"><i class="fa fa-calendar-o"></i>14 November 2023</span>
+                                <h2 class="" style="margin-bottom:0px; min-height:92px">
+                                    <a href="/keuanganberkelanjutan/id/newsmedia/detailnews/3208/permintaan-tanggapan-publik-atas-konsep-consultative-paper-taksonomi-berkelanjutan-indonesia">
+                                        Permintaan Tanggapan Publik atas Konsep Consultative Paper Taksonomi…
+                                    </a>
+                                </h2>
+                                
+                                <span class="post-meta-date">
+                                    Sumber :  <a href="https://bit.ly/DraftCPTBI" style="color: #C2C2C2; " target="_blank"> Consultative Paper Taksonomi Berkelanjutan…</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Post item-->
+
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <div class="widget">
+                <a href="/keuanganberkelanjutan/id/newsmedia/news" class="btn btn-danger">Lihat Semua Berita</a>
+        </div>
+    </div>
+</section>
+<!-- end: BERITA -->
+<!-- Agenda -->
+<section class="content pb-0">
+    <div class="container">
+        <div class="heading-text heading-section text-center" data-animate="fadeInDown">
+            <h2>Agenda</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="carousel" data-items="5">
+                </div>
+            </div>
+            <div class="col-lg-2" style="padding-left: 0px; padding-right: 0px;">
+                <a href="/keuanganberkelanjutan/id/agenda/index">
+                    <div class="card">
+                        <div data-bg-image="/keuanganberkelanjutan/assets/images/statistik/Group_522.png" style="height: 300px;">
+                            <div class="bg-overlay" data-style="10"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="text-light" style="padding-top: 80px; padding-left: 20px">
+                                            <h3 style="font-family: Poppins;">LIHAT <br> SEMUA <br> AGENDA</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>     
+        </div>
+    </div>
+</section>
+
+<!-- END Agenda -->
+
+<script>
+
+    $('#calendaragenda').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,basicWeek,basicDay'
+        },
+        defaultDate: '2019-01-12',
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        events: function (start, end, timezone, callback) {
+            $.ajax({
+                    url: "/keuanganberkelanjutan/id/agenda/getAgenda?type=", // Ganti dengan URL endpoint yang sesuai
+                    method: "GET",
+                    dataType: "json",
+                    success: function(response) {
+                        // Menggunakan data JSON yang diterima
+                        console.log(response);
+                        var events = [];
+                        if (response.length > 0) {
+                            $.map(response, function (r) {
+                                var classcalendar='';
+                                if (r.AgendaType == 1) {
+                                    classcalendar = 'fc-event-success';
+                                } else if (r.AgendaType == 2) {
+                                    classcalendar = 'fc-event-info';
+                                } else if (r.AgendaType == 3) {
+                                    classcalendar = 'fc-event-primary';
+                                } else if (r.AgendaType == 4) {
+                                    classcalendar = 'fc-event-warning';
+                                } else {
+                                    classcalendar = 'fc-event-default';
+                                }
+                                events.push({
+                                    title: r.AgendaTitleInd,
+                                    url: '/keuanganberkelanjutan/id/agenda/detailagenda/'+r.AgendaId,
+                                    start: moment(parseInt(r.AgendaDate.match(/\d+/)[0])).format('YYYY-MM-DD'),
+                                    //end: '2019-01-28',
+                                    //className: classcalendar
+                                    color: r.AgendaTypeColor,
+                                    textColor: 'white'
+                                });
+                        //console.log(moment(parseInt(r.AgendaDate.match(/\d+/)[0])).format('YYYY-MM-DD'));
+                            });
+                        }
+                        callback(events);
+                    },
+                    error: function(xhr, status, error) {
+                        // Menangani kesalahan saat permintaan AJAX
+                        console.log("Kesalahan: " + error);
+                    }
+                });
+        },
+        defaultDate: new Date()
+    });
+</script>
+
+<style>
+    .lead {
+        font-weight: 400;
+        font-family: Poppins;
+        font-size: 16px;
+    }
+
+    .post-meta-date {
+        left: -4px;
+    }
+
+    .agenda-card {
+        font-family: Poppins;
+    }
+
+    .shadowtext {
+        text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    }
+</style>
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- Social Meida Icon Fix  -->
+            <div class="icon-bar" data-animate="fadeInRight" id="social_media" data-animate-delay="1s">
+                <a href="https://www.facebook.com/official.ojk" class="facebook" target="_blank"><img src="/keuanganberkelanjutan/assets/images/social_media/iconsV2/f.svg" style="width: 35px"></a>
+                <!-- <a href="#" class="linkedin"><img src="assets/images/social_media/iconsV2/l.svg" style="width: 35px"></a>  -->
+                <a href="https://twitter.com/OJKINDONESIA" class="twitter" target="_blank"><img src="/keuanganberkelanjutan/assets/images/social_media/iconsV2/t.svg" style="width: 35px"></a>
+                <a href="https://www.instagram.com/ojkindonesia/" class="ig" target="_blank"><img src="/keuanganberkelanjutan/assets/images/social_media/iconsV2/i.svg" style="width: 35px"></a>
+                <a href="http://www.youtube.com/otoritasjasakeuangan" class="youtube" target="_blank"><img src="/keuanganberkelanjutan/assets/images/social_media/iconsV2/y.svg" style="width: 35px"></a>
+            </div>
+            <!-- Social Meida Icon Fix  -->
+
+            <div class="footer-content ojk">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- <h5 class="text-white">Otoritas Jasa Keuangan, Gedung Soemitro Djojohadikusumo</h5>
+                            <p class="text-white">Jalan Lapangan Banteng Timur 2-4</p>
+                            <p class="text-white">Jakarta 10710</p>
+                            <p class="text-white">Indonesia</p> -->
+                            <!-- <div class="widget-title">Polo HTML5 Template</div> -->
+                            <div class="widget mt-4">
+                                <div class="">
+                                    <h4 class="text-white">Otoritas Jasa Keuangan, Gedung Menara Radius Prawiro</h4>
+                                </div>
+
+                                <ul class="list">
+                                    
+                                    <li><p class="text-white pt-0">Jl. M.H. Thamrin No.2 2, RT.2/RW.3, Gambir, Kecamatan Gambir</p></li>
+                                    <li><p class="text-white pt-0">Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10110</p></li>
+                                    <li><p class="text-white">Indonesia</p></li>
+                                </ul>
+
+                                <div class="row">
+                                    <div class="col-lg-12 text-white d-none d-lg-block d-md-block">
+                                        <span class="mr-2">
+                                            <i class="fa fa-phone" style="color: white"></i> (021) 2960 0000
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fa fa-fax" style="color: white"></i> (021) 385 8321
+                                        </span>
+                                        <span>
+                                            <i class="fa fa-envelope" style="color: white"></i> sustainablefinance@ojk.go.id
+                                        </span>
+                                    </div>
+
+                                    <div class="col-sm-4 text-white d-sm-block d-md-none d-lg-none">
+                                        <i class="fa fa-phone" style="color: white"></i> (021) 2960 0000
+                                    </div>
+                                    <div class="col-sm-4 text-white d-sm-block d-md-none d-lg-none">
+                                        <i class="fa fa-fax" style="color: white"></i> (021) 385 8321
+                                    </div>
+                                    <div class="col-sm-4 text-white d-sm-block d-md-none d-lg-none">
+                                        <i class="fa fa-envelope" style="color: white"></i> sustainablefinance@ojk.go.id
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="ml-5 mt-4 text-white"><a href="tel:157"><img src="/keuanganberkelanjutan/assets/images/logo/Group_525.png" alt="" class="img-fluid" style="max-width: 80%;"></a></div> <div class="mb-4 social-icons social-icons-medium social-icons-border social-icons-rounded social-icons-colored-hover mt-4" style="margin-left: 157px; ">
+                                    <ul>
+                                        <li class="social-facebook pr-3"><a href="https://www.facebook.com/official.ojk" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="social-instagram pr-3"><a href="https://www.instagram.com/ojkindonesia/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="social-twitter pr-3"><a href="https://twitter.com/OJKINDONESIA" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="social-youtube pr-3"><a href="http://www.youtube.com/otoritasjasakeuangan" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="copyright-text text-white">
+                                Copyright Otoritas Jasa Keuangan 2025
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="copyright-text text-white">
+                                Mengatur - Mengawasi - Melindungi
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- end: Footer -->
+    <!-- Scroll top -->
+    <a id="scrollTop"><i class="icon-chevron-up" style="font-family: inspiro-icons !important; speak: none; font-style: normal;"></i><i class="icon-chevron-up" style="font-family: inspiro-icons !important; speak: none; font-style: normal;"></i></a>
+    <!--Plugins-->
+    
+
+    <script src="/keuanganberkelanjutan/assets/js/plugins.js"></script>
+    <!--Template functions-->
+    <script src="/keuanganberkelanjutan/assets/js/functions.js"></script>
+
+    <script src="/keuanganberkelanjutan/assets/plugins/metafizzy/infinite-scroll.min.js"></script>
+
+    <script type="text/javascript">
+        window.onscroll = function (ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                $('.icon-bar').hide('fadeInRight');
+                // alert("bottom page");
+            } else {
+                $('.icon-bar').show();
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <script src="/keuanganberkelanjutan/assets/plugins/newdatatables/datatables.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/newdatatables/custom_datatables.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/validate/validate.min.js"></script>
+    <script src="/keuanganberkelanjutan/assets/plugins/validate/valildate-rules.js"></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0RDZ3YR3M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z0RDZ3YR3M',{ 'debug_mode':true });
+</script>
+
+
+</body>
+</html>

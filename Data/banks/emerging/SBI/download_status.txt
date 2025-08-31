@@ -1,0 +1,15 @@
+✅ COMPLETE - SBI Sustainability Report 2023-24
+
+File: SBI-Sustainability-Report-2023-24.pdf ✅ DOWNLOADED
+Status: Ready for extraction pipeline
+
+Key Content Verified:
+- 240+ pages comprehensive sustainability report
+- ESG & Climate Finance Unit established
+- Carbon neutral by 2030 (Scope 1&2), Net zero by 2055 (Scope 1,2&3)
+- Green portfolio target: 7.5% of domestic advances by 2030
+- USD 250 million green bond raised in FY24
+- Expected Paradox Ratio: ~100
+
+✅ READY FOR ANALYSIS
+Run target_extraction_pipeline.py on this file for paradox metrics.

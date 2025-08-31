@@ -1,0 +1,1211 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    
+
+<script data-lang="en-GB" data-id="6eb04dcb-9e0d-492f-8eff-5ead3e7a6391" src="https://cdn-eu.cookietractor.com/cookietractor.js"></script>
+<script type="text/javascript">
+    function hideElements() {
+        const hiddenElements = document.getElementsByClassName("consent-missing");
+        for (var i = hiddenElements.length-1; i > -1; i--) {
+            hiddenElements[i].classList.remove("consent-missing");
+        }
+        const overlayElements = document.getElementsByClassName("consent-info");
+        for (var i = overlayElements.length-1; i > -1; i--) {
+            overlayElements[i].remove();
+        }
+    }
+    window.addEventListener("load", function(){
+        if (!cookieTractor.consentGivenFor(cookieTractor.category.functional)) {
+            const collection = document.getElementsByClassName("consent-required");
+            for (var i = 0; i < collection.length; i++) {
+                var div = document.createElement('div');
+                div.className = 'consent-info';
+                collection[i].appendChild(div);
+                var text = document.createElement('p');
+                text.textContent = "Indholdet kan ikke vises da du ikke har givet dit samtykke til vores cookie opsamling";
+                div.appendChild(text);
+                var input = document.createElement('input');
+                input.type = "button";
+                input.onclick = function () {
+                   cookieTractor.openConsentSettings();
+                };
+                input.className = "my-at-button my-at-button--primary";
+                input.value = "Administrere cookies";
+                div.appendChild(input);
+            }
+            window.addEventListener('CookieConsentGiven', function (event) {
+
+                if (cookieTractor.consent.contains(cookieTractor.category.functional)) {
+                    hideElements();
+                }
+            }, false);
+        } else {
+            hideElements();
+        }           
+    });
+</script>
+
+<title>Working Environment Act - Arbejdstilsynet</title>
+
+
+
+<meta name="title" content="Working Environment Act" />
+<meta name="pageTitle" content="Working Environment Act" />
+<meta name="FirstLetterTitle" content="§Working Environment Act" />
+<meta name="keywords" content="" />
+<meta name="description" content="Ministry of Employment Consolidated Act no. 2062 of 16 November 2021 - unofficial version" />
+
+    <link rel="canonical" href="https://at.dk/en/regulations/working-environment-act/" />
+
+
+
+
+
+
+
+
+
+    <meta name="pageID" content="33806" />
+    <link rel="icon" type="image/png" href="https://at.dk/media/5857/krone_rgb_small.png">
+
+
+<meta name="captchaSiteId" content="6LecmZAUAAAAAHY_IejZJqlwsDVNNZIhP6AF2rdK" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="https://use.typekit.net/kkw0aap.css" />
+<link type="text/css" rel="stylesheet" href="/dist/styles/app.css" />
+<link type="text/css" rel="stylesheet" href="/dist/styles/my-at.css" />
+<link type="text/css" rel="stylesheet" href="/dist/styles/print.css" />
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.0.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+</head>
+<body>
+    <div id="mit-at-login-menu" umbraco-obj="{&#xD;&#xA;  &quot;$id&quot;: &quot;1&quot;,&#xD;&#xA;  &quot;$values&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;$id&quot;: &quot;2&quot;,&#xD;&#xA;      &quot;Icon&quot;: {&#xD;&#xA;        &quot;$id&quot;: &quot;3&quot;,&#xD;&#xA;        &quot;Value&quot;: &quot;\u003Csvg class=\u0027icon\u0027\u003E\u003Cuse xmlns:xlink=\u0027http://www.w3.org/1999/xlink\u0027 xlink:href=\u0027/dist/svg/frontend-sprite.svg#icon-office\u0027\u003E\u003C/use\u003E\u003C/svg\u003E&quot;&#xD;&#xA;      },&#xD;&#xA;      &quot;LoggedOutTitle&quot;: &quot;Log on as company&quot;,&#xD;&#xA;      &quot;LoggedOutDesc&quot;: &quot;Report back on notices, and see what cases your company has got with the Danish Working Environment Authority&quot;,&#xD;&#xA;      &quot;LoggedOutPrimary&quot;: {&#xD;&#xA;        &quot;$id&quot;: &quot;4&quot;,&#xD;&#xA;        &quot;Url&quot;: &quot;https://f2-mobil-bmat.at.dk/SelfService/mycases/show/ent_overview_deadlines&quot;,&#xD;&#xA;        &quot;Name&quot;: &quot;Log on as a company&quot;,&#xD;&#xA;        &quot;Target&quot;: &quot;_blank&quot;&#xD;&#xA;      },&#xD;&#xA;      &quot;LoggedOutSecondary&quot;: null,&#xD;&#xA;      &quot;LoggedOutChangeStyle&quot;: false,&#xD;&#xA;      &quot;LoggedInTitle&quot;: &quot;Log on as company&quot;,&#xD;&#xA;      &quot;LoggedInDesc&quot;: &quot;Report back on notices, and see what cases your company has got with the Danish Working Environment Authority&quot;,&#xD;&#xA;      &quot;LoggedInPrimary&quot;: null,&#xD;&#xA;      &quot;LoggedInSecondary&quot;: null,&#xD;&#xA;      &quot;LoggedInChangeStyle&quot;: false,&#xD;&#xA;      &quot;PrimaryButtonCanLogout&quot;: false,&#xD;&#xA;      &quot;SecondaryButtonCanLogout&quot;: false&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;$id&quot;: &quot;5&quot;,&#xD;&#xA;      &quot;Icon&quot;: {&#xD;&#xA;        &quot;$id&quot;: &quot;6&quot;,&#xD;&#xA;        &quot;Value&quot;: &quot;\u003Csvg class=\u0027icon\u0027\u003E\u003Cuse xmlns:xlink=\u0027http://www.w3.org/1999/xlink\u0027 xlink:href=\u0027/dist/svg/frontend-sprite.svg#icon-person\u0027\u003E\u003C/use\u003E\u003C/svg\u003E&quot;&#xD;&#xA;      },&#xD;&#xA;      &quot;LoggedOutTitle&quot;: &quot;Log on as a person&quot;,&#xD;&#xA;      &quot;LoggedOutDesc&quot;: &quot;Save pages on AT.dk on your personal profile, and receive updates on new information and rules.&quot;,&#xD;&#xA;      &quot;LoggedOutPrimary&quot;: {&#xD;&#xA;        &quot;$id&quot;: &quot;7&quot;,&#xD;&#xA;        &quot;Url&quot;: &quot;/mit-at/&quot;,&#xD;&#xA;        &quot;Name&quot;: &quot;Log into Mit AT&quot;,&#xD;&#xA;        &quot;Target&quot;: null&#xD;&#xA;      },&#xD;&#xA;      &quot;LoggedOutSecondary&quot;: null,&#xD;&#xA;      &quot;LoggedOutChangeStyle&quot;: false,&#xD;&#xA;      &quot;LoggedInTitle&quot;: &quot;Go to Mit AT&quot;,&#xD;&#xA;      &quot;LoggedInDesc&quot;: &quot;Save pages on AT.dk on your personal profile, and receive updates on new information and rules.&quot;,&#xD;&#xA;      &quot;LoggedInPrimary&quot;: {&#xD;&#xA;        &quot;$id&quot;: &quot;8&quot;,&#xD;&#xA;        &quot;Url&quot;: &quot;/mit-at/&quot;,&#xD;&#xA;        &quot;Name&quot;: &quot;Mit AT&quot;,&#xD;&#xA;        &quot;Target&quot;: null&#xD;&#xA;      },&#xD;&#xA;      &quot;LoggedInSecondary&quot;: {&#xD;&#xA;        &quot;$id&quot;: &quot;9&quot;,&#xD;&#xA;        &quot;Url&quot;: &quot;/en/&quot;,&#xD;&#xA;        &quot;Name&quot;: &quot;Logout&quot;,&#xD;&#xA;        &quot;Target&quot;: null&#xD;&#xA;      },&#xD;&#xA;      &quot;LoggedInChangeStyle&quot;: true,&#xD;&#xA;      &quot;PrimaryButtonCanLogout&quot;: false,&#xD;&#xA;      &quot;SecondaryButtonCanLogout&quot;: true&#xD;&#xA;    }&#xD;&#xA;  ]&#xD;&#xA;}"></div>
+    <script type="text/javascript" src="/dist/scripts/vue/my-at-login-menu.js?v=c9b71e33ce3eb956fdea53abab9046b0"></script>
+    <input type="hidden" id="rulesSearchUrl" value="/en/search-page/" />
+    <input type="hidden" id="searchUrl" value="/en/search-page/" />
+    <div class="searchfield-component" data-searchpageurl="/en/search-page/" data-rulesearchpageurl="/en/search-page/" data-typeaheadindex=""></div>
+    <div class="search-help small reveal box-padding" id="search-field-help-modal" role="dialog" data-reveal data-reset-on-close="true" data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+        <button class="close-button" data-close aria-label="luk" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="reveal-content grid-x">
+            
+            <div class="clearFix">
+<h2><strong>How to search</strong></h2>
+<div>If you do not pick any options, the search will show all entries on at.dk/en/</div>
+<div></div>
+<div>You can narrow your search on the left. Note: We are working on English versions of the types.</div>
+<div></div>
+<div><strong>Reset search</strong> removes your narrowing terms.</div>
+</div>
+            
+        </div>
+    </div>
+    
+    <div class="off-canvas-wrapper">
+        
+        <a class="visually-hidden focusable arrow-link" tabindex="0" href="#main">
+            <span><svg class='icon'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/dist/svg/frontend-sprite.svg#icon-arrow'></use></svg></span>
+            G&aring; til hovedindholdet
+        </a>        
+        
+
+
+    <input type="hidden" name="siteLabels" value='{"search_limityoursearch":"Limit your search","search_searchbutton":"Search","search_placeholdertext":"Search in ","search_error":"An error occurred, please try again later","search_preparation":"Loading filters and prepares the search box","search_placeholder_announcements ":"Announcements","search_placeholder_news":"News","search_placeholder_everything":"Everything","search_placeholder_verdicts":"Verdicts","search_placeholder_rulesmain":"Rules","search_placeholder_laws":"Laws","search_placeholder_guidance":"Guidances","result_header":"Result of search","result_of":"out of","result_noresult":"No results","result_page":"Page","result_providepagenr":"Enter page no.","filterbar_linkstosubpages":"Links to subpages","filterbar_seeall":"See all","filterbar_seeverdicts":"See verdicts from working environment issues","searchfield_general_placeholder":"Search","mainmenu_header":"Main menu","search_placeholder_tools":"tools","searchfilter_combobox_subjects":"Subject","searchfilter_combobox_industries":"Industry","searchfilter_combobox_targetgroup":"Targetgroup","searchfilter_combobox_typetag":"Type","searchfilter_radio_source":"Source","searchfilter_combobox_all":"All","result_per_page":"Results per page","searchfield_close_aria_label":"close search","searchfield_aria_label":"Search","searchfield_input_aria_label":"search field","searchfield_open_search_aria_label":"open search","load-more-results":"Load more","reset_search_text":"Reset search","reset_search_aria_label":"Reset search","show_more_results_label":"Show more","search_help_label":"Click here to learn more about the search functionality","go_to_top_link":"Go to top","modal_close_button_label":"Close","skip_to_content_link":"Skip to content","result_details_select_all":"Show detailed search results","result_details_select_title":"Only show title of search results","searchfilter_radio_typetag":"Type","searchfilter_combobox_keywords":"keywords","search_all_field_filter":"Search in all","search_industries_field_filter":"Search in industries","search_field_help":"Help","chosen_label":"Chosen","searchfilter_combobox_subjectsfaq":"Subject area","search_filter_searchterm":"with","search_rules_field_filter":"Search in rules","last_revised_date":"Last revised","show_date_in_english":"Yes"}' />
+
+
+<header class="print-header grid-container">
+    <img class="print-header__logo" src="/media/7007/at-logo-en.svg"  aria-hidden="true">
+</header>
+<header data-off-canvas-sticky>
+    <noindex>
+        <div class="mobile-navigation grid-container hide-for-large">
+    <div class="grid-x grid-content">
+        <div class="cell small-3">
+            <div class="menu-toggle-container">
+                <button class="menu-icon" id="mobile-menu-toggle" data-toggle="mobile-menu-container" aria-label="Åben menu" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="cell small-6">
+            <div class="header-logo-container">
+                    <a href="/en" aria-label="Working Environment Act" class="header-logo">
+                        <img src="/media/7007/at-logo-en.svg" alt="Working Environment Act" />
+                    </a>
+            </div>
+        </div>
+        <div class="cell small-3">
+            <div class="search-container">
+                    <button type="button" class="search-spyglass-component search-spyglass mobile-spyglass" id="spyglass-mobile"  tabindex="0"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </noindex>
+    
+<noindex>
+    <div class="desktop-navigation grid-container show-for-large ">
+        <div class="grid-x grid-content">
+            <div class="cell shrink logo-container">
+                <div class="header-logo-container">
+                        <a href="/en" aria-label="Working Environment Act" class="header-logo">
+                            <img src="/media/7007/at-logo-en.svg" alt="Working Environment Act" />
+                        </a>
+                </div>
+            </div>
+            <div class="cell auto">
+                <div class="grid-x">
+                    
+<div class="service-menu">
+        <ul class="menu align-right">
+                <li>
+                    <a href="/en/ask-arbejdstilsynet/" title="Ask Arbejdstilsynet">Ask Arbejdstilsynet</a>
+                </li>
+                <li>
+                    <a href="/en/news/" title="News">News</a>
+                </li>
+                <li>
+                    <a href="/en/self-service/" title="Self-service">Self-service</a>
+                </li>
+
+
+            <li id="mit-at-service-menu" data-umbracoId="33806" data-user-logged-in="False" data-culture="en" data-url="" data-login-text="" data-logout-text=""></li>
+            <script type="text/javascript" src="/dist/scripts/vue/my-at-service-menu.js?v=8410369b4407a4b0210398b90bac4888"></script>
+        </ul>
+</div>
+                </div>
+            </div>
+            <div class="cell align-right">
+                <div class="grid-x">
+                    <div class="desktop-main-menu cell">
+                        <ul class="main-navigations main-accordion-menu" id="main-accordion-menu"
+                            role="menu"
+                            data-accordion-menu
+                            data-multi-open="false"
+                            data-submenu-toggle="true">
+                            
+                                    <li role="none" class="menu-link has-children">
+                                            <a href="/en/inspection/" title="Inspection" class="h6 ">
+                                                Inspection
+                                            </a>
+                                    </li>
+                                    <li role="none" class="menu-link has-children">
+                                            <a href="/en/regulations/" title="Regulations" class="h6 ">
+                                                Regulations
+                                            </a>
+                                    </li>
+                                    <li role="none" class="menu-link has-children">
+                                            <a href="/en/topics-tools/" title="Topics &amp; Tools" class="h6 ">
+                                                Topics &amp; Tools
+                                            </a>
+                                    </li>
+                                    <li role="none" class="menu-link has-children">
+                                            <a href="/en/chemical-substances-and-materials/" title="Chemicals" class="h6 ">
+                                                Chemicals
+                                            </a>
+                                    </li>
+                                    <li role="none" class="menu-link has-children">
+                                            <a href="/en/about-us/" title="About us" class="h6 ">
+                                                About us
+                                            </a>
+                                    </li>
+                            
+                                <li class="search-menu-icon">
+                                    <button type="button" class="search-spyglass-component search-spyglass desktop-spyglass" id="spyglass-desktop" aria-label="@*@SiteSettingsHelper.GetLabel("searchfield_open_search_aria_label")*@" tabindex="0"></button>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-shadow"></div>
+    </div>
+</noindex>
+    
+
+</header>
+
+<noindex>
+    <div class="mobile-menu-container off-canvas position-left hide-for-large"
+         id="mobile-menu-container"
+         data-off-canvas
+         data-transition="overlap"
+         data-content-scroll="false"
+         xmlns="http://www.w3.org/1999/html">
+
+        <ul class="vertical menu drilldown"
+            id="mobile-menu-drilldown"
+            data-drilldown
+            data-auto-height="true"
+            data-close-on-click="true"
+        >
+                    <li>
+                        <a href="/en/inspection/">
+                            Inspection
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/en/regulations/">
+                            Regulations
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/en/topics-tools/">
+                            Topics &amp; Tools
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/en/chemical-substances-and-materials/">
+                            Chemicals
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/en/about-us/">
+                            About us
+                        </a>
+
+                    </li>
+        </ul>
+        <div class="mobile-service-menu-container">
+                <ul class="mobile-servicemenu">
+                        <li><a href="/en/ask-arbejdstilsynet/" target="_blank" title="Ask Arbejdstilsynet">Ask Arbejdstilsynet</a></li>
+                        <li><a href="/en/news/" target="_blank" title="News">News</a></li>
+                        <li><a href="/en/self-service/" target="_blank" title="Self-service">Self-service</a></li>
+                </ul>
+        </div>
+        <div class="language-chooser-mobile grid-x">
+        </div>
+        <div class="my-at-mobile-service-menu">
+            <ul>
+                <li id="mit-at-service-menu" data-umbracoId="33806" data-user-logged-in="False" data-url="/mit-at/"></li>
+                <script type="text/javascript" src="/dist/scripts/vue/my-at-service-menu.js"></script>
+            </ul>
+        </div>
+
+    </div>
+</noindex>
+
+
+
+        
+        <div class="off-canvas-content" data-off-canvas-content>
+            <main id="main">
+                <div class="body-content">
+                    
+                            <div class="grid-x grid-container breadcrumbs-container">
+                                <div class="cell medium-6">
+                                    <div class="show-for-large">
+
+
+        <nav role="navigation" aria-label="Breadcrumb">
+            <noindex>
+                <ul class="breadcrumbs grid-margin-y grid-x">
+                                    <li><a href="/en/">Home</a></li>
+                                    <li><a href="/en/regulations/">Regulations</a></li>
+                    <li><span>Working Environment Act</span></li>
+                </ul>
+            </noindex>
+        </nav>
+
+
+                                    </div>
+                                    <div class="show-for-small hide-for-large">
+
+
+        <nav role="navigation" aria-label="Breadcrumb">
+            <noindex>
+                <ul class="breadcrumbs grid-margin-y grid-x">
+                                    <li><a href="/en/">Home</a></li>
+                                        <li>...</li>
+                                    <li><a href="/en/regulations/">Regulations</a></li>
+                </ul>
+            </noindex>
+        </nav>
+                                    </div>
+                                </div>
+                                <div class="cell medium-6">
+<noindex>
+    <div class="sharing-links flex-container">
+
+        
+        
+
+            <a href="mailto:?subject=Working Environment Act&amp;body=http://at.dk/en/regulations/working-environment-act/" class="sharing-link-icon" aria-label="Share this page by email">
+                <figure class="">
+                    <svg class='icon'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/dist/svg/frontend-sprite.svg#icon-message'></use></svg>
+                </figure>
+            </a>
+        <a href="#" role="button" class="sharing-link-icon" title="Send us some Feedback" data-open="modal-comment-reveal" aria-label="Send os feedback">
+            <figure class="" > 
+                <svg class='icon'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/dist/svg/frontend-sprite.svg#icon-chat'></use></svg>
+            </figure>
+        </a>
+        <a href="#" class="sharing-link-icon print-the-page" aria-label="Print this page" onclick="window.print();return false;" title="Print this page">
+            <figure class="">
+                <svg class='icon'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/dist/svg/frontend-sprite.svg#icon-print'></use></svg>
+            </figure>
+        </a>
+    </div>
+
+</noindex>
+<div class="small reveal modal-comment-reveal" id="modal-comment-reveal" data-reset-on-close="true" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+    <button class="close-button" data-close aria-label="luk" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="small comment-data" id="comment-data" >
+        <input name="social-media-popup-header" type="hidden" value="What do you think about at.dk?" />
+        <input name="social-media-popup-desc" type="hidden" value="Leave a comment and submit it" />
+        <input name="social-media-popup-submit" type="hidden" value="Submit" />
+        <input name="social-media-popup-somethingelse" type="hidden" value="Did you want to comment on something other than this site?" />
+        <input name="social-media-page-ref" type="hidden" value="bcb7e580-e25b-449a-8a5b-fafc6dbe10c8" />
+
+        <!-- update the value from CMS in the following two hidden input fields -->
+        <input name="social-media-popup-optional-link" type="hidden" value="If you wish to comment on multiple pages please add links here" />
+        <input name="social-media-popup-optional-mail" type="hidden" value="If you wish to receive a reply from us please leave your e-mail address here" />
+
+            <input name="social-media-popup-somethingelse-link" type="hidden" value="/en/about-us/contact-us/" />
+            <input name="social-media-popup-somethingelse-link-title" type="hidden" value="For contact information go to About Us" />
+            <input name="social-media-popup-somethingelse-link-target" type="hidden" value="@*@config.SomethingElseLink.First().Target*@" />
+        
+        <input name="is-debug-mode" type="hidden" value="False" />
+        
+        <input name="social-media-popup-error" type="hidden" value="An error occurred, try again" />
+        <input name="social-media-popup-thanks" type="hidden" value="Thanks for the feedback!" />
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                    
+
+
+<div class="detail-page grid-container grid-x">
+        <div class="grid-x detail-page-top grid-margin-x ">
+            <div class="cell large-8">
+
+            <div class="large-12 cell grid-content">
+
+
+<div class="grid-title-manchet grid-rte">
+    <!-- primary headline -->
+    <h1>Working Environment Act</h1>
+	    <!-- lead text -->
+	    <!-- content:begin -->
+	    <p class="lead">Ministry of Employment Consolidated Act no. 2062 of 16 November 2021 - unofficial version</p>
+	    <!-- content:end -->
+
+     
+        <div class="my-at-page-control" onclick="_sz.push(['event', 'Button', 'Press', 'GemMitAT']);">
+            <div id="mit-at-page" data-umbracoId="33806" data-user-logged-in="False"></div>
+            <script type="text/javascript" src="/dist/scripts/vue/my-at-page.js?v=000c1f44e92958a9060968a9f131189b"></script>
+        </div>
+
+
+    
+</div>
+            </div>
+
+            </div>
+            <div class="cell large-auto">
+
+
+            </div>
+            
+
+        </div>
+        <!-- content:begin -->
+        <div class="grid-x detail-page-body grid-margin-x" id="bodytext">
+            <div class="cell large-8">
+                    <div class="pixi-index-source">
+
+            <div class="large-12 cell grid-content">
+
+<!-- content:begin -->
+<div class="grid-component grid-rte">
+    <h2 id="afs1">Part 1 - Objective and scope</h2>
+<p><strong>1.</strong> The provisions of this Act shall have effect with a view to creating:</p>
+<ol>
+<li>a safe and healthy physical and psychosocial working environment which is at all times in accordance with the technical and social development of society, and</li>
+<li>the basis on which enterprises themselves will be able to solve issues relating to health and safety under the guidance of the employers' and workers' organisations, and under the guidance and supervision of the Working Environment Authority.</li>
+</ol>
+<p><strong>1a.</strong> (Repealed)</p>
+<p><strong>2.-(1)</strong> The Act shall cover work performed for an employer, however cf. subsections (2) and (3).<br /><br />(2) The following activities shall be exempt:</p>
+<ol>
+<li>work undertaken in the employer’s private household, however with the restrictions of section 59 on young persons under the age of 18,</li>
+<li>work which is exclusively performed by members of the employer’s family, who belong to their household, however with the restrictions of section 59 on young persons under the age of 18,</li>
+<li>work performed by military personnel and which may be attributed to actual military service.</li>
+</ol>
+<p>(3) The following provisions shall also apply to work not carried out for an employer and to the work mentioned in subsection (2):</p>
+<ol>
+<li>Section 20 on several employers at the same work site, section 20a on the employer’s contribution towards ensuring that the client’s planning, delimitation and coordination work as intended, sections 30-36 on suppliers etc. and section 37 on clients, etc.,</li>
+<li>Sections 38 and 39 on the performance of work as regards the work mentioned in section 39(1), nos. 1 and 2, and section 41 on dangerous work and section 41a on professional qualifications from abroad,</li>
+<li>Sections 45-47 on technical equipment, etc.,</li>
+<li>Sections 48-49c on substances and materials and</li>
+<li>Section 58 on road transport.</li>
+</ol>
+<p>(4) Voluntary work which has the nature of leisure activities and which is performed for philanthropic associations which do not have profit as their purpose are exempted from sections 5-11a on cooperation around safety and health organisation and section 15a on workplace risk assessments.</p>
+<p><strong>2a.</strong> The Minister for Employment may lay down regulations that any of the provisions in parts 2, 4, 5, 11a, 13, 14, 14a and 15, with the necessary adaptations, shall apply also to an employer in cases where there is a risk of work-related violence, threats and other offending behaviour outside of working hours.</p>
+<p>(2) The Minister for Employment may lay down regulations on the employer’s obligation to establish guidelines and to guide employees on matters covered by subsection (1) and to provide employees with assistance in reporting episodes of work-related violence outside of working hours to the police.</p>
+<p>(3) The Minister for Employment may further lay down regulations that one or several of the provisions in parts 2, 4, 5, 11a, 13, 14, 14a and 15 shall apply to rules laid down pursuant to subsection (2).</p>
+<p><strong>3.-(1)</strong> The provisions of this Act shall apply to aviation only as regards work on the ground. <br /><br />(2) The provisions of this Act shall apply to the shipping and fishing industries only as regards:</p>
+<ol>
+<li>loading and unloading of ships, including fishing vessels,</li>
+<li>shipyard work carried out on board ships and similar work.</li>
+</ol>
+<p><strong>4.</strong> The Minister for Employment may lay down that the provisions of this Act shall apply only to a limited extent to work carried out in the employee's own home. <br /><br /><strong>4a.</strong> The Minister for Employment may lay down the regulations, including regulations on supervision and inspection, necessary for application of the European Community's regulations with respect to matters covered by this Act</p>
+<h2 id="afs2">Part 2 - Cooperation on health and safety</h2>
+<h3>Cooperation</h3>
+<p><strong>5.</strong> Safety and health work at the individual enterprise shall be carried out through cooperation between the employer, the supervisor and the other employees.</p>
+<h3>Health and safety organisation</h3>
+<p><strong>6.</strong> In enterprises with 1-9 employees, cooperation on health and safety shall be through regular direct contact and dialogue between the employer, the employees and any supervisors. The Minister for Employment may lay down more detailed regulations on the construction of a health and safety organisation in certain sectors or types of enterprise. <br /><br /><strong>6a.</strong> In enterprises with 10-34 employees, cooperation on health and safety shall be organised in a health and safety organisation composed of one or more supervisors and one or more elected health and safety representatives, with the employer or a representative of the employer as chairman. The health and safety organisation shall be responsible for both day-to-day and overall tasks relating to health and safety. <br /><br /><strong>6b.</strong> In enterprises with 35 or more employees, cooperation shall be organised such that a health and safety organisation is established with the following two levels:</p>
+<ol>
+<li>One or more groups shall be responsible for day-to-day tasks regarding health and safety. One group shall comprise one appointed supervisor and one elected health and safety representative.</li>
+<li>One or more committees shall be responsible for overall tasks related to health and safety. If one or two groups have been established in the enterprise pursuant to no. 1, the committee shall comprise the members of the group or groups. If more than two groups have been established, the health and safety representatives shall elect between them two members for the committee, and the supervisors in the groups shall elect between them two members for the committee. The chairman of a committee shall be the employer or a representative of the employer.</li>
+</ol>
+<p><strong>6c.</strong> In collaboration with the employees and the supervisors, the employer shall stipulate the number of health and safety representatives and supervisors in the health and safety organisation established pursuant to section 6a or section 6b, taking into account the enterprise and its health and safety conditions. The number shall also be stipulated such that it is possible for the employees to discuss health and safety conditions within their working hours with health and safety representatives and supervisors in the health and safety organisation. There shall be at least as many health and safety representatives as supervisors in the health and safety organisation. <br /><br /><strong>6d.-(1)</strong> Every year the employer shall, in collaboration with the employees and the supervisors, organise the content of cooperation on health and safety for the forthcoming year and establish how this is to take place. In enterprises with a health and safety organisation, such organisation of the content of cooperation shall involve this. <br /><br />(2) Each year, the employer in enterprises with 1-9 employees, cf. section 6, shall discuss with the employees and supervisors whether the necessary technical knowledge about health and safety is present in the enterprise. <br /><br />(3) The employer shall ensure that a competence-development plan is prepared for members of the health and safety organisation regarding supplementary health and safety training, cf. section 9. <br /><br />(4) The Minister for Employment may lay down more detailed regulations about the duties of the employer pursuant to subsections (1)-(3) and the documentation required to satisfy these. <br /><br /><strong>6e.-(1)</strong> The Minister for Employment may lay down more detailed regulations on how the health and safety organisation at an enterprise is to be constituted and function, how the number of members of the health and safety organisation is to be established, election of health and safety representatives, and election and appointment of supervisors in the health and safety organisation, as well as the tasks of the health and safety organisation. <br /><br />(2) Where it is deemed unnecessary or inexpedient to organise cooperation on health and safety pursuant to the regulations in sections 6a-6c, section 6d(1) and section 8(3), the Minister for Employment may, for certain trades, sectors or work sites, grant exemptions from the said regulations. <br /><br /><strong>7.-(1)</strong> The provisions of sections 6a-6c, and section 6d(1) shall not apply insofar as, in order to enhance cooperation in the enterprise on health and safety</p>
+<ol>
+<li>an agreement has been established between one or more employee organisations and the corresponding employer organisation(s), or employers or those authorised for such purpose, and</li>
+<li>enterprises subject to an agreement established under no. 1, have established an agreement between the employer and the employees at the enterprise, or employees at part of the enterprise.</li>
+</ol>
+<p>(2) The employer shall be able to document for the Working Environment Authority that the enterprise is subject to an agreement pursuant to subsection (1). <br /><br />(3) The Minister for Employment may lay down more detailed regulations on conditions under which sections 6a-6c, and section 6d(1) may be derogated from through agreements established in accordance with subsection (1). Furthermore, the Minister for Employment may lay down more detailed regulations on how agreements pursuant to subsection (1) are to be established. <br /><br />(4) Questions of interpretation and violations of the agreements established pursuant to subsection (1) shall be resolved according to the usual industrial procedure for the area. Violations of agreements established pursuant to subsection (1), no. 2 may not, however, be brought before the Danish Labour Court, but they shall be settled by industrial arbitration. <br /><br /><strong>7a.-(1)</strong> A health and safety organisation may cover</p>
+<ol>
+<li>several operationally linked enterprises,</li>
+<li>several employers at the same work site, or</li>
+<li>municipalities or regions and independent institutions, which have established operational collective agreements.</li>
+</ol>
+<p>(2) Organisation pursuant to subsection (1) is conditional upon</p>
+<ol>
+<li>establishment of an agreement pursuant to section 7, and</li>
+<li>representation in the health and safety organisation by each of the participating enterprises.</li>
+</ol>
+<p>(3) The Minister for Employment may lay down more detailed regulations on how and under what circumstances agreements pursuant to subsections (1) and (2) may be established, and on representation by the participating enterprises in a health and safety organisation for several enterprises. <br /><br /><strong>7b.</strong> The tasks of the health and safety organisation may, if agreed between the enterprise and its employees, be extended to include environmental issues directly connected to the enterprise. The Minister for Employment may lay down more detailed regulations which ensure resolution of the health and safety issues of the enterprise. <br /><br /><strong>8.-(1)</strong> The employer shall ensure that members of the health and safety organisation are provided with reasonable time, in the circumstances, to carry out their duties on health and safety work. <br /><br />(2) The employer shall provide the members of the health and safety organisation with opportunity to acquire the necessary knowledge and training on health and safety issues. <br /><br />(3) The employer shall provide the members of the health and safety organisation with opportunity to participate in planning insofar as matters of health and safety at the workplace are concerned. <br /><br />(4) The employer shall provide the members of the health and safety organisation with opportunity to coordinate their work. <br /><br /><strong>8a.</strong> The Minister for Employment may lay down more detailed regulations on the rights and duties of the members of the health and safety organisation. <br /><br /><strong>9.-(1)</strong> The employer shall ensure that members of the health and safety organisation have completed a compulsory course on health and safety of three-days’ duration within three months of their election or appointment. Subsequently, the employer shall offer members of the health and safety organisation supplementary courses on health and safety in the first year corresponding to two days’ duration and, in each of the following years of the period of office, corresponding to one-and-a-half days’ duration. It shall be possible to complete the first two days of supplementary health and safety training within the first 12 months of the period of office. <br /><br />(2) The Minister for Employment shall lay down more detailed regulations on content, enrolment, offer and completion of the compulsory health and safety training, the supplementary health and safety training and special health and safety training for coordinators of health and safety work within the building and construction sector, as well as the qualifications of teachers and approval and quality assurance of providers of the compulsory health and safety training and the special health and safety training for coordinators. <br /><br /><strong>10.-(1)</strong> The employer shall pay all expenses in connection with the activities of the health and safety representative and shall indemnify the health and safety representative for loss of earnings. <br /><br />(2) The health and safety representative shall enjoy protection against dismissal and any other impairment of his conditions in the same way as shop stewards within the same or any similar sector. <br /><br />(3) Disputes concerning protection under subsections (1) and (2), including questions of what regulations to apply and breach of or interpretation of the regulations, shall be settled by the normal procedure for settling industrial disputes, cf. section 33 of the Danish Labour Court Act. <br /><br /><strong>11.</strong> If a supervisor in the health and safety organisation is dismissed following the end of a probationary period and one of the parties alleges that the dismissal was due to conditions relating to safety, his employment shall not be terminated during the period of notice until the matter has been subjected to consultation by the organisations according to the regulations of the relevant collective agreement or examined in accordance with the regulations of the Employers' and Salaried Employees' Act on negotiation and arbitration. Negotiation and arbitration shall be expedited as much as possible.<br /><br /><strong>11a.</strong> When visiting the enterprise, the Working Environment Authority shall normally contact relevant health and safety representatives and supervisors in the health and safety organisation. These shall be free to submit to the Authority all questions concerning health and safety.</p>
+<h3>Advice</h3>
+<p><strong>12.</strong> If the employer does not have the necessary expertise to undertake the health and safety work of the enterprise, the employer shall seek external expert assistance with a view to ensuring the continued health and safety of the employees. The Minister for Employment may lay down more detailed regulations on this matter. <br /><br /><strong>13.</strong> (Repealed). <br /><br /><strong>13a.</strong> (Repealed). <br /><br /><strong>13b.</strong> (Repealed). <br /><br /><strong>13c.</strong> The Minister for Employment shall lay down regulations on the authorisation of health and safety consultants including the obligation to use necessary expertise when the Working Environment Authority so imposes, cf. section 77a(1).</p>
+<h2 id="afs3">Part 3 - Sector working environment councils</h2>
+<p><strong>14.-(1)</strong> Following an opinion from the Working Environment Council, cf. section 66(3), 3rd clause, the Minister for Employment approves a number of sector working environment councils which shall assist the enterprises of one or several sectors with information and sector guidelines on health and safety.</p>
+<p>(2) Employee and employer organisations within the sectors covered by the individual sector working environment council shall appoint an equal number of members to the sector association. The individual council shall itself determine the number of members it is to have. In the event that no agreement can be reached, the Minister for Employment shall determine the number of members. Members and proxies are appointed for four years at a time and may be reappointed. If an appointment takes place within a period, the appointment shall only apply until expiry of the period.</p>
+<p>(3) Each sector working environment council shall elect a chairman and a deputy chairman from among its members. The chairman and deputy chairman posts will be held alternately between employees and employers for two years at a time.</p>
+<p>(4) Each sector working environment council shall set its own rules of procedure and establish a secretariat.</p>
+<p>(5) Each sector working environment council submits a statement of its activities each year to the Minister for Employment.</p>
+<p><strong>14a.-(1)</strong> Each sector working environment council shall, within the purview of the council, assist enterprises within the sector with guidance on health and safety at work. Each sector working environment council can initiate and participate in specific enterprise-oriented health and safety activities within the sector and participate in cross-disciplinary activities initiated by the Working Environment Council pursuant to section 66(6).</p>
+<p>(2) The Minister for Employment shall lay down more detailed regulations on the organisation, composition, and activities of the sector working environment councils, including the tasks and functions of the councils.</p>
+<p>(3) After consultation with the Minister for the Environment, the tasks of the sector working environment councils may be expanded to encompass environmental matters directly related to the enterprises. The Minister for Employment may lay down more detailed regulations which ensure resolution of the health and safety issues of the enterprises.</p>
+<h2 id="afs4">Part 4 - General duties</h2>
+<h3>Employer</h3>
+<p><strong>15.</strong> It shall be the duty of the employer to ensure safe and healthy working conditions. Special reference is made to:</p>
+<ol>
+<li>Part 5 on the performance of the work,</li>
+<li>Part 6 on the design and fitting out of the work site,</li>
+<li>Part 7 on technical equipment, etc.,</li>
+<li>Part 8 on substances and materials.</li>
+</ol>
+<p><strong>15a.-(1)</strong> The employer shall ensure the preparation of a written workplace assessment of the health and safety conditions at the workplace, taking due regard to the nature of the work, the work methods and work processes which are applied, as well as the size and organisation of the enterprise. The workplace assessment shall remain at the enterprise and be available to the management and employees at the enterprise, as well as the Working Environment Authority, which inspects the workplace assessment. A workplace assessment shall be revised when there are changes in work, work methods, work processes, etc., and these changes are significant for health and safety at work. The workplace assessment shall be revised at least every three years. <br /><br />(2) A workplace assessment shall include an opinion on the health and safety issues at the workplace, and how these are to be resolved in compliance with the principles of prevention stated in the health and safety legislation. The assessment shall include the following elements:</p>
+<ol>
+<li>Identification and mapping of the health and safety conditions at the enterprise.</li>
+<li>Description and assessment of the health and safety issues at the enterprise.</li>
+<li>Priorities and an action plan to resolve the health and safety issues at the enterprise.</li>
+<li>Guidelines for following up the action plan.</li>
+</ol>
+<p>(3) The employer shall involve the health and safety organisation or the employees in planning, organising, implementation and following up the workplace assessment, cf. subsections (1) and (2). <br /><br />(4) The Minister for Employment may lay down more detailed regulations about the duties pursuant to subsections (1)-(3). <br /><br />(5) The Minister for Employment may lay down more detailed regulations on the duty of the employer to ensure that physicians, occupational health clinics and health authorities responsible for occupational health examinations have access to the workplace assessment of the enterprise when this is relevant for employee health checks.</p>
+<p>(6) The Minister for Employment may lay down further rules on the obligation of the employer to, upon request, disclose or publish the enterprise’s workplace evaluation regarding electromagnetic fields.<br /><br /><strong>16.</strong> The employer shall ensure that there is effective supervision that work is performed safely and without risks to health. <br /><br /><strong>17.-(1)</strong> The employer shall inform the employees of any risks of accidents and diseases which may exist in connection with their work. <br /><br />(2) Furthermore, the employer shall ensure that the employees receive the necessary training and instruction to perform their work in such a way as to avoid any possibility of risk. <br /><br />(3) The Minister for Employment may lay down more detailed regulations about the duties of the employer pursuant to subsections (1) and (2). <br /><br /><strong>17a.-(1)</strong> Employees shall have the right to leave their workplace or a danger zone in the event of serious or immediate danger which cannot be avoided. <br /><br />(2) The position of the employee must not be adversely affected because the employee leaves the workplace or a danger zone, cf. subsection (1). <br /><br />(3) Employees whose rights under subsections (1) and (2) are violated may be awarded compensation. <br /><br /><strong>17b.-(1)</strong> The employer shall ensure that the employees, taking account of their knowledge and access to technical aids, are able to decide upon appropriate measures themselves in order to avoid the consequences of serious and immediate danger to the safety of themselves or others, when it is not possible for the employees to contact the employer, manager or supervisor. <br /><br />(2) The position of an employee shall not be adversely affected because the employee has taken measures pursuant to subsection (1), unless the employee in such cases has acted with intentional or gross negligence. <br /><br />(3) Employees whose rights under subsection (2) are violated may be awarded compensation. <br /><br /><strong>17c.</strong> The provisions laid down in sections 17a and 17b shall not apply in circumstances where a collective agreement gives the employees rights which as a minimum correspond to Article 8(4) and (5) of Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the health and safety of workers at work. <br /><br /><strong>18.</strong> The employer has a duty to inform the employee health and safety representatives and shop stewards within the relevant area as to the decisions taken by the Working Environment Authority and the written improvement notices which the Working Environment Authority has issued. Correspondingly, the employer shall also have such duty to other health and safety representatives and shop stewards who request to be informed of the decision or the notice.<br /><br /><strong>19.</strong> The employer shall ensure that cooperation concerning health and safety in accordance with Part 2 is possible and shall participate in such cooperation. <br /><br /><strong>20.-(1)</strong> Several employers who have work carried out at the same work site and all persons employed at the same work site shall cooperate to create safe and healthy working conditions for all employees. <br /><br />(2) The Minister for Employment may lay down further regulations on this matter. <br /><br /><strong>20a.-(1)</strong> Employers, who have work carried out at construction sites, shall contribute to ensuring that the clients planning, demarcation and coordination to promote the health and safety of the employees function as intended. The employer shall take account of instructions from the clients coordinator in this respect. <br /><br />(2) The Minister for Employment may lay down more detailed regulations about the duties of the employer pursuant to subsection (1).</p>
+<p>21.-(1) When the Working Environment Authority so requests, or when circumstances otherwise dictate, the employer shall allow for investigations, tests and inspections to be conducted, with the assistance of special expertise where necessary, in order to ascertain whether working conditions are appropriate for health and safety. The Working Environment Authority may order that the investigation be carried out immediately or within a given deadline.</p>
+<p>(2) The Minister for Employment may lay down more detailed rules providing that investigations, etc., which are requested by the Working Environment Authority pursuant to subsection (1) shall be undertaken with use of the necessary expertise.</p>
+<p><strong>22.-(1)</strong> The employer shall give notification to the Working Environment Authority and shall keep registers according to regulations laid down by the Minister for Employment. <br /><br />(2) The Director General of the Working Environment Authority may require the employers to submit information for statistical purposes relating to:</p>
+<ol>
+<li>number, sex, age and health of the employees,</li>
+<li>machines, machine parts, containers, prefabricated constructions, appliances, tools and other technical equipment,</li>
+<li>substances and materials,</li>
+<li>other matters of importance to health and safety.</li>
+</ol>
+<p>(3) If statistics are published, no names or firms shall be mentioned. <br /><br /><strong>22a.</strong> The Minister for Employment shall lay down more detailed regulations the employer's duty to incorporate absenteeism due to sickness in the health and safety work of the enterprise in order to reduce absenteeism due to sickness at the enterprise.</p>
+<h3>Management at enterprises, etc.</h3>
+<p><strong>23.</strong> The provisions of this Act on the duties of the employer shall also apply to the manager or management of the enterprise.</p>
+<h3>Supervisor</h3>
+<p><strong>24.</strong> “Supervisor” shall mean a person whose work consists solely or primarily of managing or supervising, on behalf of the employer, the work in an enterprise or any part thereof. <br /><br /><strong>25.</strong> The supervisor shall participate in the cooperation concerning health and safety, cf. Part 2, and sections 20 and 37.</p>
+<p><strong>26.-(1)</strong> The supervisor shall contribute towards ensuring that the working conditions are appropriate in relation to health and safety within the work area for which he is supervisor. The supervisor shall ensure that the measures taken to promote safety and health work as intended.</p>
+<p>(2) If the supervisor becomes aware of any errors or deficiencies which may entail a risk of accident or diseases, then the supervisor must take steps to avert such danger. Where the risk cannot immediately be averted by his intervention, he shall inform the employer without delay.</p>
+<h3>Employees</h3>
+<p><strong>27.</strong> The employees shall participate in the cooperation concerning health and safety, cf. Part 2. <br /><br /><strong>28.-(1)</strong> The employees shall cooperate to ensure that the working conditions are safe and without risks to health within their field of activity and shall check the effectiveness of measures taken to promote health and safety. <br /><br />(2) If the employees become aware of errors or deficiencies which may adversely affect safety or health and which they cannot remedy themselves, they shall inform a member of the health and safety organisation, the supervisor, or the employer. <br /><br />(3) Any person who has to remove a safety device temporarily to perform a job, such as repair work or installation, shall ensure that such device is replaced immediately after the performance of the job or that an equally safe protective measure is taken. <br /><br /><strong>29.-(1)</strong> Persons working at a work site where several employers have work carried out shall comply with the regulations applying to cooperation between enterprises, cf. sections 20 and 37, as well as with the regulations applying to the work which they are to perform. <br /><br />(2) Persons working on the premises of an enterprise other than their employer's enterprise shall comply with the regulations on health and safety which apply to that enterprise as well as with the regulations applying to the work which they are to perform.</p>
+<h3>Suppliers, fitters, repair workers and planners, etc.</h3>
+<p><strong>30.-(1)</strong> Any person who supplies, makes available or displays machines, machine parts, containers, prefabricated constructions, appliances, tools, building components, other technical equipment or personal protective equipment shall ensure that such articles are provided with the necessary protective equipment when supplied for use or display and that they can be used as intended without risks to safety or health, cf. Part 7. Adequate and simple instructions for operation, maintenance, transport and installation shall be made available upon delivery.<br /><br />(2) The same obligations shall apply where technical equipment ready for use is supplied or made available for the purpose of being resold, hired out, or lent. <br /><br />(3) When the Working Environment Authority so demands, or when circumstances otherwise dictate, the importer or manufacturer shall have investigations, tests and examinations conducted, possibly by a specialist expert, in order to ascertain whether technical equipment is appropriate for health and safety. <br /><br />(4) If technical equipment is manufactured on the basis of the buyer's detailed written instructions, the importer or manufacturer shall be relieved from the obligations imposed by subsections (1)-(3). <br /><br /><strong>31.</strong> Any machine which is supplied or displayed in Denmark shall be provided with the name and address of the manufacturer or, as far as imported machines are concerned, with the name and address of the importer, or with any other marking which facilitates identification of the manufacturer or the importer, respectively. <br /><br /><strong>32.-(1)</strong> Any person who, as an independent enterprise, installs, converts, or recondition technical equipment shall ensure compliance with the safety rules and instructions applying to the equipment concerned. <br /><br />(2) If a repair affects only one or some parts of the object being repaired, the person performing the repair shall ensure compliance with the safety rules and instructions applying to the components. If, during the course of his work, the person performing the repair discovers other errors or deficiencies with an implication for safety, he shall inform the user or owner.<br /><br /><strong>33.</strong> Any person who supplies a project for technical equipment, production plant, or building or construction work, shall, in the project, take into account health and safety in connection with the performance of the work and the operation of the finished building or plant, etc. The same shall apply to any person giving advice on matters concerning health and safety. <br /><br /><strong>33a.-(1)</strong> Any person who provides a service shall, when preparing his tender materials in connection with the tender, ensure that he has paid due consideration to safety and health in the performance of the assignment. The provider must also ensure that the tender materials contain relevant details on specific, substantial working environment conditions which are associated with performance of the work with a view to ensuring that the person who performs the work is duly informed.<br /><br />(2) A tenderer shall furthermore help to ensure that the employer who is awarded the task can execute the task put out to tender appropriately in relation to health and safety. <br /><br /><strong>34.</strong> The provisions laid down in sections 30, 31, 33, and 35(2) shall also apply to suppliers, etc. of substances and materials with properties which may involve a risk to, or in any other way adversely affect, safety or health. <br /><br /><strong>35.-(1)</strong> The Minister for Employment may lay down more detailed regulations on the matters covered by sections 30-34. <br /><br />(2) The regulations laid down in sections 30-34 shall not relieve the user of the duties under this Act. <br /><br /><strong>36.</strong> The Minister for Employment may, under exceptional circumstances, lay down regulations or take decisions which derogate from the requirements under sections 30-34. Such decisions may also be made by the Director General of the Working Environment Authority in individual cases and under exceptional circumstances.</p>
+<h3>Clients, etc.</h3>
+<p><strong>37.-(1)</strong> For building and construction activities where several employers are active at the same work site, the client shall plan, demarcate and coordinate the measures to be taken to promote the health and safety of employees. <br /><br />(2) The Minister for Employment shall lay down more detailed regulations on the obligations of the client under subsection (1), including regulations on:</p>
+<ol>
+<li>demarcation of the tasks of the individual employers in common areas prior to the commencement of work,</li>
+<li>preparation and maintenance of a plan for health and safety at the construction site,</li>
+<li>coordination of health and safety measures at the planning stage and during performance of building and construction work,</li>
+<li>appointment of a coordinator with the necessary knowledge and training or the necessary qualifications in health and safety matters to manage the coordination of health and safety measures at the planning stage and during the performance of building and construction work, and</li>
+<li>preparation and the necessary adjustment of a record book, adapted to the characteristics of the project, containing a list of the matters regarding health and safety to be taken into account during any future work.</li>
+</ol>
+<p>(3) The Minister for Employment shall lay down more detailed regulations on when the obligations of the client under subsection (1) are effective. <br /><br />(4) The Minister for Employment may lay down regulations that, upon request, the client shall document to the Working Environment Authority that the coordinator has the necessary knowledge and training or the necessary qualifications in health and safety matters to manage the coordination of health and safety measures at the planning stage and during the performance of building and construction work. <br /><br />(5) The Minister for Employment shall lay down more detailed regulations on the obligations of the client to notify major building and construction works to the Working Environment Authority. <br /><br />(6) Furthermore, the client shall help to enable the employer to carry out the building and construction work appropriately in relation to health and safety.</p>
+<h2 id="afs5">Part 5 - The performance of the work</h2>
+<p><strong>38.-(1)</strong> Work shall be planned, organised and carried out in such a way as to ensure health and safety. <br /><br />(2) Approved standards of importance to health or safety shall be complied with. <br /><br /><strong>39.-(1)</strong> The Minister for Employment may lay down more detailed regulations on the requirements which shall be complied with in order that the work may be regarded as planned, organised and performed in such a way as to ensure health and safety, including regulations on:</p>
+<ol>
+<li>measures relating to health and safety in connection with work, working processes and methods, e.g. to avoid collapses, falls, subsidence, vibration, radiation, noise, or risks of explosion, fire, or to health from gases, fumes, vapours, dust and smoke, heat, cold, odours, infections, or incorrect working postures, movements or strains,</li>
+<li>prohibition of particularly dangerous work, working processes, and working methods,</li>
+<li>notices or adequate marking.</li>
+</ol>
+<p>(2) The Minister for Employment may also lay down regulations on special work clothing and personal protective equipment and on who is to pay for the expenses incurred. <br /><br /><strong>40.</strong> Where necessary to ensure the health and safety of the employees, the Minister for Employment may lay down regulations providing:</p>
+<ol>
+<li>that plans for working procedures, processes and methods shall be prepared, and</li>
+<li>that such plans or amendments to such plans shall be submitted for the opinion or approval of the Working Environment Authority before being implemented.</li>
+</ol>
+<p><strong>41.</strong> The Minister for Employment may lay down regulations:</p>
+<ol>
+<li>that work which may involve substantial risks of accidents or disease may only be carried out by persons who have been specially trained, have passed a test, or who are above a certain age,</li>
+<li>on employment of persons with physical or mental disabilities or diseases which may involve an increased risk of accidents or disease in connection with certain activities,</li>
+<li>on restrictions on allowing employees to work alone.</li>
+</ol>
+<p><strong>41a.-(1)</strong> The Minister for Employment may lay down regulations that a person, whose professional qualifications were obtained in a third country, may only perform work within areas requiring specified training or completion of a test, if said person has had his professional qualifications approved by the Working Environment Authority. <br /><br />(2) The Minister for Employment may lay down regulations that a person, who intends to work permanently in Denmark, and whose professional qualifications were obtained in other EU Member States, EEA countries or countries which have agreements with the EU, may only perform work within areas requiring specified training or completion of a test, if said person has had his professional qualifications approved by the Working Environment Authority. <br /><br />(3) The Minister for Employment may lay down regulations that a person, who intends to work temporarily or occasionally in Denmark, and whose professional qualifications were obtained in other EU Member States, EEA countries or countries which have agreements with the EU, shall have his qualifications verified in advance for approval, before commencing work within areas requiring specified training or completion of a test. This shall only apply for work which is significant for public health and safety and if the objective of verification is to avoid serious injury to the recipient of the service. <br /><br /><strong>41b.</strong> The Minister for Employment may lay down regulations that, on request, the employer shall document for the Working Environment Authority that employees have the necessary qualifications to perform the relevant work for which specified training, tests, certificates, work experience or similar is required.</p>
+<h2 id="afs6">Part 6 - Design and fitting out of the work site</h2>
+<p><strong>42.-(1)</strong> The work site shall be in such a condition that it is safe and healthy. <br /><br />(2) Approved standards of importance to health or safety shall be observed. <br /><br /><strong>43.-(1)</strong> The Minister for Employment may lay down regulations on the design and fitting out of permanent, temporary, varying, and outdoor work sites, including regulations on:</p>
+<ol>
+<li>work rooms, e.g. ceiling height, air space, floors, walls, ceilings, lighting, temperature, ventilation and noise,</li>
+<li>welfare facilities, etc., e.g. rest rooms and canteens, cloakrooms, locker rooms, lavatories, washing and bathing facilities and sleeping facilities and seating,</li>
+<li>means of exit, e.g. passages, gangways, staircases, and exits.</li>
+</ol>
+<p>(2) The regulations laid down in pursuance of subsection (1) may provide that they shall also apply to tenants of buildings, premises, areas, etc. <br /><br />44. Where necessary to ensure the health or safety of the employees, the Minister for Employment may lay down regulations providing:</p>
+<ol>
+<li>projects, etc. for the building or conversion of enterprises shall be submitted to the Working Environment Authority for its opinion or approval before they are implemented,</li>
+<li>plans for fitting out or altering premises, technical installations and equipment, etc. shall be submitted to the Working Environment Authority for its opinion or approval before they are implemented,</li>
+<li>buildings, rooms, premises, etc. shall not be let out or leased for commercial purposes until the question of their suitability for the proposed purpose has been submitted to the Working Environment Authority for its opinion or approval.</li>
+</ol>
+<h2 id="afs7">Part 7 - Technical equipment, etc.</h2>
+<p><strong>45.-(1)</strong> Machine, machine parts, containers, prefabricated constructions, appliances, tools, building components, other technical equipment and personal protective equipment shall be designed and used in such a way that they are safe and without risks to health.<br /><br />(2) Approved standards of importance to health or safety shall be observed. <br /><br /><strong>46.</strong> The Minister for Employment may lay down regulations on the design and use of technical equipment, etc., including regulations on:</p>
+<ol>
+<li>construction, manufacture, installation, registration and testing,</li>
+<li>submission to the Working Environment Authority of plans for construction, manufacture or installation for its opinion or approval,</li>
+<li>approval by the Working Environment Authority of technical equipment etc. before it is supplied or made available to the user or taken into use,</li>
+<li>use, maintenance, and care.</li>
+</ol>
+<p>47. The Minister for Employment may lay down regulations prohibiting the manufacture, import, supply, transfer, display or use of particularly dangerous technical equipment.</p>
+<h2 id="afs8">Part 8 - Substances and materials</h2>
+<p><strong>48.-(1)</strong> Substances and materials with properties which may be dangerous or which may otherwise compromise health or safety may only be manufactured and used in work processes and methods which effectively secure employees against accidents and illness. <br /><br />(2) Approved standards of importance to health or safety shall be observed. <br /><br /><strong>49.-(1)</strong> The Minister for Employment may lay down more detailed regulations concerning the manufacture, import, storage, transportation and use of substances and materials with properties which may be dangerous or which may otherwise compromise health or safety, including regulations concerning packing, refilling and labelling. <br /><br />(2) The Minister for Employment may lay down regulations prohibiting the manufacture, import, and use of particularly dangerous substances and materials. <br /><br /><strong>49a.-(1)</strong> With a view to preventing and addressing health problems and injuries from accidents in the working environment, the Minister for Employment may lay down regulations providing that anyone manufacturing or importing a substance or material shall carry out examinations or acquire necessary documentation of previous examinations, and submit notifications. In this connection, regulations may be laid down for all substances and materials, for individual substances and materials, for specific groups of substances and materials or for substances and materials for special applications. <br /><br />(2) The following contents for the notification may be stipulated:</p>
+<ol>
+<li>Information on conditions which are of significance to the assessment of the properties or effects of the substance or material, including whether it has properties which may be dangerous or otherwise compromise health or safety.</li>
+<li>Suggestions for classification, packaging, and labelling.</li>
+<li>Information on preventive measures which effectively secure employees against adverse effects on health and safety.</li>
+</ol>
+<p>(3) It may further be laid down that new substances and materials may be utilised no sooner than one month after the date of the notification. There shall be opportunity to extend this time limit in situations where the notification is incomplete or in error, such that the substance or material may be utilised no sooner than one month after the information the notification is to contain has been received. <br /><br />(4) The Minister for Employment shall lay down regulations regarding the establishment, operation, and use of a register of substances and materials. <br /><br /><strong>49b.</strong> The Minister for Employment may lay down regulations providing that technical data sheets and similar which are issued by the manufacturer or importer of substances and materials shall contain all important information on the effects of the substance or material on health and safety in the working environment. <br /><br /><strong>49c.-(1)</strong> The Minister for Employment may lay down regulations providing that a substance or material which may be dangerous for or otherwise compromise health or safety may not be used if it can be substituted with a non hazardous, less dangerous or less problematic substance or material. <br /><br />(2) The Minister for Employment may lay down regulations providing that substances or materials which may be dangerous for or otherwise compromise, health and safety may not be used for specific purposes or within specific areas, before an opinion or approval from the Working Environment Authority has been issued.</p>
+<h2 id="afs9">Part 9 - Rest periods and rest days</h2>
+<p><strong>50.-(1)</strong> Working hours shall be organised so as to allow a rest period of at least 11 consecutive hours within every period of 24 hours. <br /><br />(2) The rest period may be reduced to eight hours for:</p>
+<ol>
+<li>change of shifts in enterprises with several shifts when it is not possible to maintain the daily or weekly rest period between the end of the work of one shift and the start of another shift,</li>
+<li>agricultural work up to 30 days in any calendar year.</li>
+</ol>
+<p>(3) The regulations in subsections (1) and (2) above shall not apply to loading and unloading primarily carried out by casual workers and necessary activities incidental hereto. The Minister for Employment may lay down more detailed regulations for a minimum rest period before the relevant employee returns to work after completing overtime. <br /><br /><strong>51.-(1)</strong> Within each period of seven days, employees shall have a weekly 24-hour period off, which shall be in immediate connection to a daily rest period. The weekly 24-hour period off shall, as far as possible, fall on a Sunday, and, as far as possible, at the same time for all employees at the enterprise. <br /><br />(2) The regulation in subsection (1), 2nd clause shall not apply to agriculture or horticulture.<br /><br />(3) For work caring for people, animals, or plants, and for work which is necessary to preserve objects of value, the weekly 24-hour period off may be deferred and replaced by a corresponding period off later, when this is necessary for reasons of protection or to ensure continuous provision of services or sustained production. The Minister for Employment may lay down more detailed regulations on this matter. <br /><br /><strong>52.</strong> Where the normal operation of an enterprise is being, or has been, disturbed by acts of nature, accidents, breakdowns of machinery or similar unforeseeable events, the provisions of sections 50 and 51 may be derogated from, to the necessary extent. Any derogation shall be documented in writing.<br /><br /><strong>53.</strong> For trades, sectors, or special types of work, where special conditions make it necessary, the Minister for Employment may lay down regulations concerning:</p>
+<ol>
+<li>the daily rest period, including concerning reductions in the daily rest period to eight hours, and concerning the timing of the rest period, and</li>
+<li>the weekly 24-hour period off, including adjustments to the 24-hour period off.</li>
+</ol>
+<p><strong>54.</strong> Sections 50 and 51 shall apply to persons in senior positions and to representatives and agents working outside the permanent premises of the enterprise only to the extent laid down by the Minister for Employment. <br /><br /><strong>55.</strong> The Minister for Employment may lay down regulations concerning the conditions under which sections 50 and 51 may be derogated from by agreement. <br /><br /><strong>56.</strong> In situations of derogation pursuant to sections 50-55, corresponding compensatory rest periods or 24-hour periods off shall be provided, or appropriate protection shall be provided in exceptional circumstances of such a nature that it is not possible to provide compensatory rest periods or 24-hour periods off. The Minister for Employment may lay down that the 1st clause shall not apply to persons in senior positions. <br /><br /><strong>57.</strong> The Minister for Employment may lay down regulations concerning reduced working hours in respect of work which may involve an exceptional risk to health and safety. <br /><br /><strong>58.</strong> The regulations laid down in pursuance of sections 53 and 57 may apply to any person who is a driver or a member of the crew of a vehicle, including persons who are not engaged in work for an employer.</p>
+<h2 id="afs10">Part 10 - Young persons under the age of 18</h2>
+<p><strong>59.</strong> The regulations in this Part shall apply to work performed by young persons for an employer, including work which is mentioned in section 2(2), nos. 1 and 2. <br /><br /><strong>60.-(1)</strong> For the employment of young persons under the age of 18, planning, organisation and performance of work shall take account of the age, development, and health of the young person, as well as the work’s effect on schooling or other education. <br /><br />(2) Young persons who are under the age of 15, or who are subject to compulsory education shall not perform work. <br /><br />(3) The Minister for Employment shall lay down more detailed regulations regarding employment of young persons, including higher age limits than 15 years for specific types of work in order to ensure that work can be performed in a safe and healthy manner. Special regulations may be laid down for young people receiving education. <br /><br />(4) The Minister for Employment may lay down regulations providing that occasional or short-term work which is performed either in the employer’s private household or exclusively by members of the employer’s own family and who belong to the household, including within agricultural enterprises, are to be exempt from the prohibition in subsection (2) and sections 61 and 62 subject to other conditions and restrictions which may exist. However it is a prerequisite that the work does not endanger the young person’s safety or health.<br /><br />(5) By stating conditions and restrictions, the Minister for Employment may lay down derogations from the age limits provided for in subsection (3) for young persons who are members of the family or household of the employer, including agricultural enterprises, due to the special knowledge of agriculture the young person may have. <br /><br />(6) The Minister for Employment may also lay down regulations:</p>
+<ol>
+<li>that young persons who have reached the age of 13 years may undertake light duties within limited types of work, and under specific conditions and restrictions,</li>
+<li>that the prohibition in subsection (2) and section 61 may be derogated from for young people who have reached the age of 14 years and who work as part of an educational course, and</li>
+<li>that the prohibition laid down in subsection (2) and sections 61 and 62 may be derogated from in respect of young persons taking part in performances, etc. of a cultural or artistic nature, sports events, or film making, or similar provided that permission has been obtained in each case for young persons under the age of 13 years.</li>
+</ol>
+<p>(7) When employing young persons under the age of 15 years or young persons who are receiving compulsory education, the employer shall inform the young person’s parents or guardians of the employment, including working hours, and risks of disease or accidents which may be connected with the work as well as measures implemented concerning health and safety. <br /><br /><strong>61.-(1)</strong> The working hours for young persons under the age of 18 shall not exceed the normal working hours for adults employed in the same sector, and working hours shall not exceed eight hours per 24-hour period and 40 hours per week. <br /><br />(2) Daily working hours for young persons under the age of 15 years, or young persons subject to compulsory education, must not exceed two hours on school days, and seven hours on other days than school days. However, young persons who have reached 15 years, but who are subject to compulsory education, may work eight hours on days which are not school days. The total working hours per week may not exceed 12 hours in weeks with school days, and 35 hours in weeks other than school weeks. However, young persons who have reached 15 years, but who are still subject to compulsory education may work 40 hours in weeks other than school weeks. Children who are under 15 years, but who are no longer subject to compulsory education may not work for more than seven hours per day and 35 hours per week. <br /><br />(3) If daily working hours exceed 4½ hours, young persons under 18 years shall have a rest period of at least 30 minutes. Such rest period shall be at an appropriate time, and, if possible, continuous. <br /><br />(4) Young persons under the age of 18 shall not work between the hours of 8.00pm and 6.00am. <br /><br />(5) The Minister for Employment may lay down special regulations concerning:</p>
+<ol>
+<li>the organisation of working hours, including calculations in cases where young persons work as part of an education course, or where young persons work for more than one employer,</li>
+<li>the extent to which subsection (1) above may be derogated from for young persons who have reached the age of 15 years and who are no longer subject to compulsory education,</li>
+<li>that young persons who are subject to compulsory education shall have a period in the school holidays which is entirely free of work, and</li>
+<li>that the provisions of subsection (4) above may be derogated from for trades or sectors in situations where circumstances make it necessary or desirable for young persons who have reached the age of 15 years, and who are no longer subject to compulsory education. However, the young person must under no circumstances work between the hours of 12.00 midnight and 4.00am.</li>
+</ol>
+<p><strong>62.-(1)</strong> Young persons under 18 years shall be allowed a rest period of at least 12 consecutive hours during a period of 24 hours. However, young persons under 15 years, or young persons who are subject to compulsory education shall be allowed a rest period of at least 14 consecutive hours during a period of 24 hours. <br /><br />(2) Within each seven-day period, young persons under the age of 18 shall have two consecutive 24-hour periods off. If it is not possible to place the two 24-hour periods off consecutively then one of the 24-hour periods off shall be placed immediately before or after a daily rest period. One of these 24-hour periods off shall, as far as possible, fall on a Sunday.<br /><br />(3) For trades or sectors, or special types of work, in situations where circumstances make it necessary or desirable, the Minister for Employment may lay down special regulations concerning:</p>
+<ol>
+<li>the duration of the rest period for young persons who have reached the age of 15 years and who are no longer subject to compulsory education, when the young person is allowed a compensatory rest period,</li>
+<li>postponement of a 24-hour period off for young persons who have reached the age of 15 years and who are no longer subject to compulsory education, when the young person is allowed a compensatory 24-hour period off,</li>
+<li>interruption of a rest period, and</li>
+<li>restriction of 24-hour periods off, although the young person shall always be allowed no less than 36 consecutive hours off within each period of seven days.</li>
+</ol>
+<p><strong>62a.-(1)</strong> The Minister for Employment may also lay down regulations concerning derogations from section 61(1), (3) and (4) in the circumstances mentioned in section 52 for young persons who have reached the age of 15 years and who are no longer subject to compulsory education.</p>
+<p>(2) The Minister for Employment may, after consultation with the Minister for Justice, in connection with allocating tasks to the Police according to this Act, lay down regulations stipulating the authority within the Police which shall be responsible for carrying out the relevant tasks.</p>
+<h2 id="afs11">Part 11 - Medical examinations, etc.</h2>
+<p><strong>63.-(1)</strong> In respect of enterprises, trades, sectors or other groups of employees whose work involves a risk to the health of the employees, the Minister for Employment may lay down regulations requiring:</p>
+<ol>
+<li>medical examination of the employees before they are employed, during their employment and after the termination of their employment, possibly in regular examinations, and</li>
+<li>regular or individual surveys of health conditions from the point of view of occupational medicine, occupational hygiene, etc.</li>
+</ol>
+<p>(2) The Minister for Employment may lay down regulations concerning similar surveys to establish whether a particular activity may involve risks to health. <br /><br />(3) The costs in connection with such examinations and surveys shall be paid by the employer or the State according to regulations laid down by the Minister for Employment. <br /><br />(4) The employer shall ensure that the examinations and surveys can be carried out without loss of income for the employee and, as far as possible, within working hours. <br /><br />(5) Employees and former employees have a duty to undergo examination in accordance with the regulations laid down. <br /><br /><strong>64.-(1)</strong> The Minister for Employment may lay down special regulations concerning medical examinations of young persons under the age of 18 with a view to their commencing employment. The provisions of section 63(3)-(5) shall apply correspondingly.</p>
+<p>(2) It may be established in the regulations that the municipal health service, on the basis of an examination taken before the pupil leaves the school, must make a statement as to whether the pupil suffers or has suffered from a disease that may affect their safety and health in gainful employment. Similar regulations may be laid down for young people under the age of 18 who are in vocational education.</p>
+<p>(3) Furthermore, the regulations may require that, on engaging a young person under the age of 18, employers shall satisfy themselves that the work for which the young person is employed is compatible with his state of health.</p>
+<p><strong>65.-(1)</strong> The Minister for Employment may appoint a representative board of experts to make decisions according to the regulations issued in pursuance of this Act on issues as to whether a young person under the age of 18 may perform a particular type of work considering his health situation. <br /><br />(2) The decisions of the board may not be appealed to a higher administrative authority. <br /><br />(3) The Minister for Employment shall lay down regulations regarding the composition and activities of the board and the financing of its activities.</p>
+<h2 id="afs11a">Part 11a - Approved working environment certificate</h2>
+<p><strong>65a.-(1)</strong> An enterprise with employees may have an approved working environment certificate issued, cf. section 65c. An approved working environment certificate shall relate to either the legal entity with all associated production entities, or to one or more production entities.</p>
+<p>(2) An enterprise for which an approved working environment certificate may be issued shall mean a legal entity in the form of:</p>
+<ol>
+<li>A natural person in its capacity as an employer.</li>
+<li>A legal person or branch of a foreign legal person.</li>
+<li>A governmental administrative entity.</li>
+<li>A region.</li>
+<li>A municipality.</li>
+<li>A municipal community.</li>
+</ol>
+<p>(3) A production entity for which an approved working environment certificate may be issued, shall mean:</p>
+<ol>
+<li>The main activity exercised by a legal entity with only one main activity and where all activity is exercised at or from the same geographical address as the address of the legal entity.</li>
+<li>The individual main activity, if a legal entity has several main activities which are exercised at or from one geographical address.</li>
+<li>The individual activity, if a legal entity has activities which are exercised at or from several geographical addresses.</li>
+</ol>
+<p>(4) An approved working environment certificate may not be issued for a construction site. <br /><br /><strong>65b.-(1)</strong> In order for an enterprise to have an approved working environment certificate issued, including an associated production entity, the enterprise shall be able to document a sound working environment. The following requirements shall be met:</p>
+<ol>
+<li>The material working environment of the enterprise or production entity shall be in compliance with the requirements laid down in health and safety legislation with regard to significant health and safety issues in a number of areas. Significant health and safety issues shall mean issues which may lead to an improvement notice under this Act.</li>
+<li>The enterprise or production entity shall meet the requirements laid down for their own efforts on health and safety at work.</li>
+<li>Documentation shall be made available on the efforts carried out by the enterprise or production entity to comply with the requirements in nos. 1 and 2, as well as the results of such efforts. It shall also be documented that employees or their representatives have been involved in the work on meeting the requirements in nos. 1 and 2.</li>
+</ol>
+<p>(2) In addition to the requirements laid down in subsection (1), requirements may be laid down that the enterprise, together with employees or their representatives, shall determine how it will specifically work for an inclusive workplace and an inclusive labour market, as well as for promotion of health at the workplace. The enterprise shall then be able to document compliance with this requirement. <br /><br />(3) In addition to the requirements set out in subsections (1) and (2), enterprises can be required to inform the certification body in anonymised form as to any occupational accidents which the enterprise has a duty to report and of any reported occupational diseases of which the enterprise is aware and the prevention thereof.<br /><br />(4) The Minister for Employment may lay down regulations stipulating that documentation from enterprises pursuant to subsections (1)-(3) shall be made publicly available.</p>
+<p><strong>65c.-(1)</strong> A recognised working environment certificate can be attained through accredited certification. Accredited certification is performed by a certification body. The relevant body shall be accredited for this purpose by DANAK or a similar recognised accreditation body.</p>
+<p>(2) Certification bodies pay to be accredited in accordance with rules laid down by the accreditation body. Enterprises pay for certification, including the issuance of a certificate.</p>
+<p>(3) A recognised working environment certificate is valid for three years from the date of issuance.</p>
+<p><strong>65d.</strong> After consultation with the Minister for Business and Industry, the Minister for Employment may lay down more detailed rules on certification in connection with the issuance of a recognised working environment certificate. In connection with this, rules may be laid down placing requirements on accreditation and certification bodies, including supplementary requirements on the auditing and competences of certification bodies and rules on the issuance of a recognised working environment certificate, including the publication of enterprises with a certificate.</p>
+<h2 id="afs12">Part 12 - The Working Environment Council</h2>
+<p><strong>66.-(1)</strong> The Working Environment Council shall participate in the organisation and performance of all working environment work by providing consultancy for the Minister for Employment and issuing recommendations to the Minister for Employment on:</p>
+<ol>
+<li>the overall objectives and priorities for working environment work,</li>
+<li>allocation of funds under section 68a(1) and</li>
+<li>following up the work of the Working Environment Council.</li>
+</ol>
+<p>(2) In accordance with the recommendations under subsection (1), the Working Environment Council gives a status to the Minister for Employment for the follow-up of specific sector-level targets which the Working Environment Council has established in dialogue with the sector working environment councils for the working environment.</p>
+<p>(3) The Working Environment Council discusses, on its own initiative, those matters which it deems of significance to health and safety at work and to the area of industrial injuries and shall present its opinions on such matters to the Minister for Employment. For the purposes of its internal political discussions and setting priorities, the Council may initiate development and analysis activities which may be of a cross-disciplinary nature. The Council shall submit its opinions before the Ministry for Employment approves the sector working environment councils pursuant to section 14(1).</p>
+<p>(4) Each year, the Working Environment Council shall submit a report to the Minister for Employment concerning developments in the working environment field and improvements which the Council considers desirable.</p>
+<p>(5) Each year, the Working Environment Council shall submit a report to the Minister for Employment concerning developments on the working environment and the area of industrial injuries and improvements which the Council finds desirable.</p>
+<p>(6) The Working Environment Council initiates cross-disciplinary activities for the funds allocated to it under section 68a(1).</p>
+<p>(7) The Minister for Employment shall lay down more detailed regulations on the cross-disciplinary activities in accordance with subsection (6).<br /><br /><strong>66a.</strong> (Repealed). <br /><br /><strong>67.-(1)</strong> The Working Environment Council shall consist of a chairman and the following other members:</p>
+<ol>
+<li>Eight members proposed by the Danish Trade Union Confederation.</li>
+<li>Two members proposed by the Danish Confederation of Professional Associations.</li>
+<li>Four members proposed by the Confederation of Danish Employers.</li>
+<li>One member proposed by the Danish Association of Managers and Executives.</li>
+<li>One member proposed jointly by the Confederation of Danish Employers and the Danish Agriculture &amp; Food Council.</li>
+<li>One member proposed by the Danish Employers’ Association for the Financial Sector.</li>
+<li>Two members proposed collectively by the regions jointly with Local Government Denmark.</li>
+<li>One member proposed by the Ministry of Taxation.</li>
+</ol>
+<p>(2) The chairman and the other members of the Council, as well as their proxies, shall be appointed by the Minister for Employment for a term of four years, and they may be reappointed. If an appointment takes place within the four-year period, such appointment shall only apply until expiry of the period. <br /><br />(3) Decisions of the Working Environment Council shall be by simple majority amongst members in attendance. In the event of parity of votes, the chairman shall have the casting vote. <br /><br />(4) The following may attend meetings of the Council with one representative but without voting rights:</p>
+<ol>
+<li>Ministry of Employment</li>
+<li>The Working Environment Authority</li>
+<li>The NFA, National Research Centre for the Working Environment</li>
+<li>The Ministry of Health.</li>
+</ol>
+<p>(5) The Council may set up working committees and appoint members for such committees, also from outside the Council itself. <br /><br />(6) The Council may procure expert opinions and initiate inquiries for the purpose of its work. <br /><br />(7) The Minister for Employment shall approve the rules of procedure of the Council. <br /><br />(8) The Minister for Employment shall establish a secretariat for the Working Environment Council. <br /><br />(9) The Minister for Employment shall establish a research centre for the working environment and may lay down more detailed regulations in this respect.</p>
+<h2 id="afs12a">Part 12 a – Financing of the parties’ work environment efforts, etc.</h2>
+<p><strong>68.-(1)</strong> Funds for the state, cf. subsection (7), and for the performance of the activities of the Working Environment Council and the work of the sector working environment councils for the for the improvement of health and safety shall be procured through contributions, cf. subsections (2) and (3), from</p>
+<ol>
+<li> the state,</li>
+<li>Labour Market Insurance as regards the performance of tasks regarding financing the area of occupational diseases, cf. section 3 of the Act on Labour Market Insurance2),</li>
+<li>insurance companies which offer industrial injuries insurance,</li>
+<li>municipalities, regions and other employers who have not taken out insurance, cf. section 48(1)-(5) and section 88 of the Act on Industrial Injury Insurance, and</li>
+<li>The Danish Guarantee Fund for Non-Life Insurers in those situations in which the Guarantee Fund has overtaken administration of a portfolio of occupational insurance policies for an insurance company, cf. the Act on the Guarantee Fund for Non-Life Insurers.</li>
+</ol>
+<p>(2) The contribution under subsection (1) shall be stated in the annual Finance Act and shall consist of an amount of DKK 45 million which is adjusted by the Minister for Employment following recommendations from the Working Environment Council. The amount shall be appropriated proportionally to the organisations obliged to make contributions under subsection (1), on the basis of their share of the total payments for injuries and compensation for loss of earnings capacity which have been approved pursuant to the Act on Industrial Injury Insurance in the year prior to the year in which the contribution is levied.</p>
+<p>(3) The contribution under subsection (1) shall furthermore comprise an amount which is established as the average of two per cent of the total payments for injuries and compensation for loss of earning capacity approved in occupational accident cases pursuant to the Act on Industrial Injury Insurance in a ten-year period. The ten-year period is calculated beginning from and including the calendar year which is two years prior to the contribution year and ten years back. The amount shall be collected from the organisations obliged to make contributions, cf. subsection (1), except for Labour Market Insurance, cf. subsection (1), no. 2, on the basis of their shares of the total payments for permanent injury and compensation for loss of earning capacity which have been approved in occupational accident cases pursuant to the Act on Industrial Injury Insurance in the year prior to the year in which the contribution is levied.</p>
+<p>(4) Irrespective of the insurance contracts entered into, the insurance companies may increase the premiums of compulsory industrial injuries insurance proportionately to cover the contributions under subsections (2) and (3).</p>
+<p>(5) For the coverage of contributions under subsection (2), Labour Market Insurance, with respect to carrying out tasks regarding financing the area of industrial diseases, cf. section 3 of the Act on Labour Market Insurance3), may increase contributions for compulsory insurance against sudden lifting injuries and occupational diseases.</p>
+<p>(6) In addition to the state’s proportion of the contributions mentioned in subsections (2) and (3), the state shall provide an annual contribution which shall be laid down by the Minister for Employment.</p>
+<p>(7) Of the contributions under subsections (2) and (3), DKK 50.4 million accrues annually to the state.</p>
+<p>(8) The Minister for Employment shall lay down more detailed regulations for the calculation, levy period and payment of contributions pursuant to subsections (2) and (3).</p>
+<p><strong>68a.-(1)</strong> On the recommendations of the Working Environment Council, the Minister for Employment shall appropriate the funds procured under section 68 for the performance of health and safety work and shall allocate subsidy frameworks to the activities of the Working Environment Council, including cross-disciplinary activities, cf. section 66(6), and for the individual sector working environment councils.</p>
+<p>(2) The Minister for Employment shall lay down more detailed rules for the use of the funds.</p>
+<p>(3) Within the allocated subsidy frameworks and the more detailed requirements for application, the Working Environment Council and the individual sector working environment councils shall lay down provisions on the activities which are to be performed.</p>
+<p>(4) The Minister for Employment may determine that subsidies shall be withheld, cancelled or repaid, if the requirements for application of the funds are not complied with.</p>
+<p>(5) Unused funds, including cancelled or repaid subsidies pursuant to subsection (4), shall be included in the Working Environment Council’s funds for cross-disciplinary activities. However, following consultation with the Working Environment Council, the Minister for Employment may make another decision on the use of the funds.</p>
+<p>(6) The Working Environment Council appropriates funds for cross-disciplinary activities pursuant to subsections (1) and (5) between the sector working environment councils and the Working Environment Council.</p>
+<p>(7) The Minister for Employment shall lay down more detailed regulations regarding payment of subsidies, preparation of annual plans which the sector working environment councils shall prepare, submission of accounts and retrospective adjustment etc., for the sector working environment councils. The Minister for Employment may decide that the subsidies may be paid in advance. Auditing of the accounts is undertaken by the Auditor General pursuant to the rules in the Act on the Audit of Public Accounts, Etc.</p>
+<p><strong>68b.</strong> (Repealed).</p>
+<h2 id="afs13">Part 13 - The Working Environment Authority</h2>
+<p><strong>69.</strong> The Minister for Employment shall be the supreme administrative authority in matters concerning health and safety. <br /><br /><strong>70.</strong> The Working Environment Authority shall be an agency under the auspices of the Ministry of Employment, and shall comprise a central unit and a number of regional inspectorates. The Director General of the Working Environment Authority shall lay down the division of responsibilities between the inspectorates. <br /><br /><strong>71.</strong> The Director General of the Working Environment Authority shall be in charge of the Working Environment Authority. <br /><br /><strong>72.-(1)</strong> It shall be the duty of the Working Environment Authority to:</p>
+<ol>
+<li>advise enterprises, sector working environment councils, employees' and employers' organisations and the public in all matters concerning health and safety issues,</li>
+<li>provide enterprises with 1-4 employees with additional guidance beyond that mentioned in no. 1,</li>
+<li>assist the Ministry of Employment in preparing the regulations pursuant to this Act,</li>
+<li>issue provisions under the authority from the Minister for Employment,</li>
+<li>remain cognizant of technical and social developments with a view to improving activities to promote health and safety in the working environment,</li>
+<li>examine plans for working processes, work sites, technical equipment, etc. and substances and materials and issue licences under this Act or administrative provisions,</li>
+<li>ensure that this Act and the regulations laid down under the authority of this Act are complied with, except for sections 17a-c.</li>
+</ol>
+<p>(2) The Working Environment Authority may obtain access to necessary information in the income register, cf. section 7 of the Income Register Act, and in the customs and tax authority’s registration system for enterprises, in order to identify enterprises on the basis of reported occupational diseases, cf. section 75.</p>
+<p>(3) The Working Environment Authority has terminal access to information on occupational accidents and diseases in the joint system of the Labour Market Insurance and the Working Environment Authority for the reporting of occupational accidents and diseases, cf. section 34a(1) in the Act on Industrial Injury Insurance, including for collection and coordination for control purposes and for analysis, prevention and statistics.</p>
+<p>(4) The Working Environment Authority may, to the extent necessary for the identification of enterprises for the purposes of directing the supervision and inspection activities of the Working Environment Authority, collect and coordinate information for control purposes</p>
+<ol>
+<li>from the income registry pertaining to an employee’s place of employment, period of employment, including start date and end date, and number of hours,</li>
+<li>from the joint IT-based database for administration of labour market legislation, cf. section 47 of the Act on Organisation and Support Related to Employment Activities, Etc, pertaining to duration of sickness benefits, the reason for the absence, benefits, case type and place of employment as the course of events and termination related to the sickness benefits for recipients of sickness benefits and</li>
+<li>from the civil registration system (CPR) pertaining to citizenship and date of entry.</li>
+</ol>
+<p>(5) The Working Environment Authority may, to the extent necessary for control purposes and for analysis and prevention purposes, and in order to compile statistics, collect and coordinate information from the Labour Market Insurance’s databases beyond that which is set out in section 3 on occupational accidents and diseases, cf. section 34a(2) in the Act on Industrial Injury Insurance.</p>
+<p>(6) The Working Environment Authority can collect, process and coordinate information from other authorities when this is necessary for the performance of the agency’s duties including the identification of enterprises for the purposes of targeting the Working Environment Authority’s inspection and supervision activities and for analysis, prevention and statistics.</p>
+<p>(7) The Working Environment Authority may disclose its own information and information covered by subsections (1)-(6) to other authorities when this is necessary for the performance of the duties of these authorities, including inspection and supervisory activities.</p>
+<p>(8) The Minister for Employment shall lay down more detailed regulations for the collection, processing and disclosure of information by the Working Environment Authority pursuant to subsections (6) and (7), including when and for what purposes and tasks information can be collected and processed, when information is to be deleted and regarding the technical and organisational measures to be adopted in connection with processing.</p>
+<p><strong>72a.-(1)</strong> The Minister for Employment can lay down more detailed rules providing that enterprises which hold a recognised working environment certificate will only be subject to supervision when there are particular grounds for this.</p>
+<p>(2) The Ministry for Employment can lay down more detailed rules providing that the Working Environment Authority may, as a part of its supervisory role, undertake evaluation visits to enterprises which hold a recognised working environment certificate, cf. subsection (1). In connection with this, the Minister for Employment may lay down regulations on which enterprises shall undergo evaluation visits, how evaluation visits shall be undertaken, the duration of the period during which the Working Environment Authority undertakes its evaluation visits, the composition of the evaluation visits, etc.</p>
+<p>(3) The Ministry for Employment can lay down more detailed rules providing that the Working Environment Authority, as a part of its evaluation visits to enterprises with a recognised working environment certificate, cf. subsection (1), may only issue rulings on circumstances that are to be immediately addressed in order to avert an imminent, serious risk to the safety or health of the employees or any other persons, cf. section 77(2) or matters which are to be remedied immediately due to a significant danger, cf. section 77(1).</p>
+<p><strong>72b-(1)</strong> The Minister for Employment may lay down regulations providing that the Working Environment Authority shall not be under an obligation to ensure compliance with regulations issued pursuant to this Act when a similar obligation is covered by a collective agreement between a national authority or employers' organisation of the one part and a national employees' organisation of the other part. <br /><br />(2) The employer shall document that a similar obligation is covered by a collective agreement, cf. subsection (1). <br /><br />(3) Notwithstanding subsection (1), the Working Environment Authority shall undertake to ensure compliance with the regulations, if the party to the collective agreement does not intend to initiate industrial disputes procedures for contravention of obligations covered by a collective agreement, cf. subsection (1). <br /><br />(4) Notwithstanding subsection (1), the Working Environment Authority shall ensure compliance with the regulations in relation to employees who are not covered by a collective agreement. <br /><br />(5) Subsections (1)-(4) shall not apply to agreements concluded pursuant to section 7(1), section 7a(2), section 17c and section 55. <br /><br /><strong>73.</strong> The Minister for Employment may authorise the Director General of the Working Environment Authority to exercise powers which are conferred by law unto the Minister for Employment. In connection herewith and after consultation with the Working Environment Council, the Minister for Employment may decide to permit derogation from section 66(3), 3rd clause, and section 66(4).<br /><br /><strong>74.-(1)</strong> The Minister for Employment may direct that the activities of the Working Environment Authority, to a specified degree, shall be transferred to another public authority or a private institution, and to what extent the Working Environment Authority shall supervise such inspection activities. <br /><br />(2) The Minister for Employment may lay down regulations concerning the approval of tests and other documentation to prove that instructions on health and safety have been observed. <br /><br />(3) The Minister for Employment may lay down regulations on the payment, possibly in the form of charges according to a fixed rate, for investigations, etc. carried out or initiated by the Working Environment Authority. <br /><br />(4) The Minister for Employment may lay down more detailed regulations providing that, upon request, the Working Environment Authority may issue binding advance notice to employers, planners and consultants concerning the performance of specific, planned work before it is commenced. <br /><br />(5) The Minister for Employment may empower private enterprises to authorise health and safety consultants. <br /><br />(6) The Minister for Employment may lay down regulations on fees, including on collection and payment, in settlement of costs incurred by the Working Environment Authority for:</p>
+<ol>
+<li>Approval and quality assurance as well as the training of providers of health and safety training and training for coordinators of health and safety work within the building and construction sector, cf. section 9(2),</li>
+<li>processing requests for binding advance notice, cf. section 74(4),</li>
+<li>processing applications for empowerment to authorise health and safety consultants, for approval and control tasks and changes thereto, cf. section 74(5),</li>
+<li>processing of applications for authorisation as well as changes and control thereof, cf. section 13c.</li>
+</ol>
+<p>(7) Fees paid to the Working Environment Authority pursuant to subsection (6) which are not paid in due time shall be subject to interest of 1.5 percent for each commenced month from the due date.</p>
+<p>(8) Fees paid to the Working Environment Authority pursuant to subsection (6) shall be adjusted automatically according to the general price and pay index.</p>
+<p>(9) The Minister for Employment can lay down regulations on payment to the party to which the Working Environment Authority has delegated or assigned tasks, cf. section 9(2) and 74(5).<br /><br /><strong>74a.-(1)</strong> The Minister for Employment may lay down regulations that a person, whose professional qualifications were obtained in a third country, shall apply to have such professional qualifications recognised before commencing work within areas requiring specified training or completion of a test. <br /><br />(2) The Minister for Employment may lay down regulations that a person, who intends to work permanently in Denmark, and whose professional qualifications were obtained in other EU Member States, EEA countries or countries which have agreements with the EU, shall apply to have his professional qualifications recognised before commencing work within areas requiring specified training or completion of a test. <br /><br />(3) The Minister for Employment may lay down regulations that a person, who intends to work temporarily or occasionally in Denmark, and whose professional qualifications were obtained in other EU Member States, EEA countries or countries which have agreements with the EU, shall submit written notification to the Working Environment Authority before commencing work within areas requiring specified training or completion of a test. This shall only apply, however, for work which is significant for public health and safety and if the objective of verification is to avoid serious injury to the recipient of the service. <br /><br />(4) The Minister for Employment may lay down regulations on application and notification, including submission of proof of the professional qualifications. <br /><br />(5) The Minister for Employment may lay down regulations on submission to an aptitude test or completion of a trial period for persons whose professional qualifications have been obtained in a third country or in another country within the EU, the EEA or countries with which the EU has entered into an agreement. <br /><br />(6) The Minister for Employment may lay down regulations necessary to comply with Denmark's obligations under Union law in the areas covered by requirements for training, education or examinations prescribed in this Act and the provisions laid down pursuant to this Act.</p>
+<p><strong>74b.-(1)</strong> The Minister for Employment can lay down more detailed rules providing that the Working Environment Authority may, as a part of its supervisory role pursuant to section 72(1), no. 7, undertake stricter supervision when the Working Environment Authority has previously made a ruling in regards to the same enterprise on conditions to be addressed immediately in order to avert an imminent, serious risk to the safety or health of the employees or any other persons, cf. section 77(2).</p>
+<p>(2) The Ministry for Employment can lay down regulations on the collection and payment of a fee from the enterprises in order to cover the costs of the Working Environment Authority in the event of stricter supervision, cf. subsection (1). Fees which are not paid in due time shall be subject to interest of 1.5 percent for each commenced month from the due date.<br /><br /><strong>75.-(1)</strong> The Minister for Employment may lay down regulations making it a duty to give notification of industrial accidents, cases of poisoning, occupational diseases and other matters of importance to health and safety. <br /><br />(2) Any person who, in the course of public service or in the performance of a public function, obtains knowledge of matters which are in contravention of this Act or regulations issued in pursuance of this Act shall inform the Working Environment Authority. <br /><br />(3) Inspection bodies accredited for monitoring, periodic inspections, tests, etc., shall notify the Working Environment Authority if they find that technical equipment or parts of technical equipment present a hazard if no intervention is made. The Minister for Employment may lay down more detailed regulations on this matter. <br /><br />(4) Any physician who finds or suspects that a person has been exposed to harmful influences at his workplace shall notify such cases to the Working Environment Authority. The Minister for Employment may lay down more detailed regulations on this matter. <br /><br /><strong>76.-(1)</strong> Any person who is subject to obligations under this Act shall, on request, provide the Working Environment Authority with all information necessary for the performance of its work. <br /><br />(2) If there is specific reason to suspect that a legal person has committed an offence that may be punishable, the obligation for natural persons associated with the legal person to submit information pursuant to subsection (1) shall apply insofar as information is sought for the purpose of considering other matters than assessment of penalties, cf. section 10(2) of the Danish Act on Due Process in Connection with the Administration’s Use of Compulsory Intervention and Duties of Disclosure. <br /><br />(3) The staff of the Working Environment Authority may, at all times, on proof of identity and without a court order, gain access to public and private work sites, cf. however, subsection (4), insofar as it is required to carry out their duties. The police shall provide the necessary assistance. More detailed regulations for such assistance may be laid down by the Minister for Employment, after consultation with the Minister for Justice. <br /><br />(4) Subsection (3) shall not apply to inspection by the Working Environment Authority of work of a non-commercial nature carried out by persons at their private residence, holiday residence, land associated hereto, vehicles, leisure vessels, and other property or items belonging to the household. The Minister for Employment may, however, lay down that the Working Environment Authority may continue to carry out inspection and supervision of elevators and other lifting equipment, as well as equipment under pressure, without a court order. <br /><br />(5) The staff of the Working Environment Authority may, in performance of its work, without a court order demand presentation of all available documentation, including taking photographs and similar, and taking samples for further analysis or examination. The employer, or the employer’s representative, cf. sections 23 and 24, shall be informed of such action.</p>
+<p>(6) Employees of the Working Environment Authority may speak with employees without others being present in connection with the inspections.</p>
+<p>(7) Employees of the Danish Working Environment Authority may, as part of the inspection, conduct group interviews with employees when justified by conditions related to the working environment. During group interviews with employees, the employer, their representative, cf. sections 23 and 24, or a person designated by the employer shall have the right to be present unless the Working Environment Authority’s employees determine there is a risk that this would make the group interview serve no purpose.<br /><br /><strong>77.-(1)</strong> The Working Environment Authority may decide matters which are in contravention of this Act, or in contravention of regulations or decisions in pursuance of this Act, and in this respect order that matters be remedied immediately or within a specified period. <br /><br />(2) Where the Working Environment Authority finds it necessary in order to avert an imminent, serious risk to the safety or health of the employees or any other persons, it may order that the risk be addressed immediately, including</p>
+<ol>
+<li>that those present shall leave the danger zone immediately,</li>
+<li>that the use of a machine, machine part, container, prefabricated construction, appliance, tool, or other technical equipment or a substance or material be discontinued, or</li>
+<li>that work as such be discontinued.</li>
+</ol>
+<p>(3) The Director General of the Working Environment Authority may order that, any person who has supplied or placed on the market technical equipment or personal protective equipment or a substance or material which presents a risk to health and safety, despite being utilised in accordance with its relevant instructions, shall take the necessary measures to remedy the matter. In this connection the Director General may order:</p>
+<ol>
+<li>that supply or market placement be discontinued,</li>
+<li>that the relevant technical equipment, personal protective equipment, substance or material be withdrawn from the market.  </li>
+</ol>
+<p>(4) The Working Environment Authority may order the person who has supplied or placed on the market technical equipment, personal protective equipment, or a substance or material to destroy this in an appropriate manner, if the technical equipment, personal protective equipment, or substance or material poses a serious risk to health and safety.</p>
+<p><strong>77a.-(1)</strong> The Working Environment Authority may order that the recipient of prohibitions or other rulings on contraventions of working environment legislation shall use the necessary expertise either by building and using their own competences or by procuring assistance from an authorised work environment advisor, among other things with a view to improving preventative health and safety work within the enterprise.</p>
+<p>(2) The Minister for Employment shall lay down more detailed regulations on the content, scope and duration of the prohibition as well as more detailed terms, including any deadlines for the development and use of own competences.</p>
+<p><strong>77b.-(1)</strong> The Working Environment Authority may enter into a written agreement with the employer on the improvement of the working environment and on the resolution of one or several concrete health and safety problems within a given deadline.</p>
+<p>(2) An agreement can be entered into when</p>
+<ol>
+<li>The Working Environment Authority has identified matters which violate this Act or rules or rulings issued in pursuance of this Act and which are to be remedied within a deadline, and the employer wishes to resolve the health and safety problem concerned in several places within the enterprise or</li>
+<li>The Working Environment Authority suspects circumstances which violate this Act or rules or rulings issued in pursuance of the Act and the employer wishes to resolve the health and safety problem(s) which is/are suspected.</li>
+</ol>
+<p>(3) When an agreement is entered into pursuant to subsections (1) and (2), the health and safety organisation, or the employees in the case of enterprises without an obligation to establish a health and safety organisation, shall be informed that an agreement has been entered into and the health and safety organisation or the employees shall be involved in the work undertaken to resolve the health and safety problem.</p>
+<p>(4) An agreement will be followed up by a supervision in order to verify the situation.</p>
+<p>(5) An agreement can be terminated by the employer or the Working Environment Authority if the circumstances which provided grounds for the agreement change substantially.</p>
+<p><strong>78.</strong> (Repealed)</p>
+<p><strong>78a.-(1)</strong> The Minister for Employment can lay down more detailed rules on the publication of the health and safety conditions of named enterprises on the basis of the results of the supervision, including prohibitions or other rulings on contraventions of working environment legislation, on the publication of the health and safety problems which give grounds for the Working Environment Authority’s rulings and whether the enterprise is subject to stricter supervision. In connection with this, the Ministry for Employment may decide to introduce a scheme for the publication of the health and safety conditions of enterprises for which the Working Environment Authority has not found any contraventions.</p>
+<p>(2) The Minister for Employment can lay down further rules on the way in which, in what form and with what duration the enterprise’s health and safety conditions shall be made available to the public. In connection with this, the Minister of Employment can lay down more detailed rules providing that the publication of the health and safety conditions in enterprises with a recognised working environment certificate may cease completely or for a specified period.</p>
+<p>(3) The Minister for Employment may lay down more detailed rules on the publication, including the digital publication, of information on safety measures for enterprises for which there is a risk of greater accidents involving hazardous substances, including information which is included in the safety documentation of such enterprises.</p>
+<p><strong>78b.</strong> The Minister for Employment may lay down regulations providing that test and development activities be performed which derogate from the provisions laid down in sections 77-78(a). However, this does not apply when a decision is made on matters to be remedied immediately due to a substantial risk, cf. section 77(1), or which must be addressed immediately, cf. section 77(2).</p>
+<p><strong>78c.-(1)</strong> The employer shall provide written feedback on the rulings of the Working Environment Authority when the Working Environment Authority so requests.</p>
+<p>(2) When providing feedback on rulings, the employer must ensure that, prior to the deadline for providing feedback, the health and safety organisation, or in the case of enterprises which do not have a duty to establish a health and safety organisation, a representative of the employees, is made aware of the content of the feedback. The employer must give a declaration to this effect.</p>
+<p><strong>79.-(1)</strong> Authorities and persons performing functions in pursuance of sections 13c-14a and Parts 11, 12, 13 and 14, as well as any person providing assistance in such functions, shall be subject to the regulations on duty of silence pursuant to sections 152-152e of the Danish Criminal Code. Section 152f of the Danish Criminal Code shall also apply. <br /><br />(2) The Working Environment Authority shall not disclose to an employer or others that the Working Environment Authority has received a complaint. <br /><br /><strong>79a.-(1)</strong> As a part of its supervisory activities pursuant to this Act, the Working Environment Authority shall supervise compliance with the legislation on smoke-free environments and Part 2 of the Act on Electronic Cigarettes, Etc. The Working Environment Authority may, possibly subject to specific conditions, order that any circumstances which violate legislation on smoke-free environments and Part 2 of the Act on Electronic Cigarettes by remedied immediately or within a specified deadline.<br /><br />(2) Section 76 and the regulations issued in pursuance hereof shall apply correspondingly. <br /><br />(3) After consultation with the Minister for Health, the Minister for Employment may lay down more detailed regulations concerning the performance of the inspection. <br /><br />(4) The decisions of the Working Environment Authority made in pursuance of subsection (1) may be appealed to the Council of Appeal on Health and Safety at Work. Section 81(1)-(5) shall apply correspondingly. <br /><br /><strong>80.</strong> After consultation with the appropriate minister, the Minister for Employment shall lay down regulations concerning the cooperation between the Working Environment Authority and other public authorities.</p>
+<h2 id="afs13a">Part 13a - The National Research Centre for the Working Environment</h2>
+<p><strong>80a.</strong> The National Research Centre for the Working Environment is a research centre under the Ministry of Employment.</p>
+<h2 id="afs14">Part 14 - Right of appeal</h2>
+<p><strong>81.-(1)</strong> Appeals against a ruling taken by the Working Environment Authority in relation to this Act, cf. however subsection (6), or pursuant to an EU regulation concerning matters covered by this Act, can be brought before the Council of Appeal on Health and Safety at Work within four weeks after the decision was notified to the person concerned.<br /><br />(2) The appeal shall be submitted to the Working Environment Authority. If the Working Environment Authority upholds the appeal, the appeal shall be forwarded to the Council of Appeal on Health and Safety at Work for further consideration. <br /><br />(3) The submission of an appeal within the period allowed shall act as stay of proceedings until the Council of Appeal on Health and Safety at Work makes a decision. Appeals against decisions under section 77(1), which shall be remedied immediately, as well as decisions under section 77(2) and (3) shall not act as stay of proceedings. <br /><br />(4) Under exceptional circumstances the Council of Appeal on Health and Safety at Work may hear an appeal and grant stay of proceedings, although the appeal has not been brought within the required period. <br /><br />(5) Decisions made by the Council of Appeal on Health and Safety at Work may not be brought before another administrative authority. <br /><br />(6) Appeals against decisions taken by the Working Environment Authority regarding regulations laid down pursuant to section 14a(2), section 68(8) and section 68a(7) can be brought before the Minister for Employment within four weeks after the decision was notified to the person concerned.</p>
+<p>(7) Appeals against decisions taken by the Working Environment Authority in relation to rules issued pursuant to section 14a(2), section 68(8) and 68a(7) can be brought before the Minister for Employment within four weeks after the decision was notified to the person concerned.<br /><br /><strong>81a.-(1)</strong> The Council of Appeal on Health and Safety at Work shall comprise a chairman and the following duly appointed members:</p>
+<ol>
+<li>Four members proposed by the Danish Trade Union Confederation.</li>
+<li>One member proposed by the Danish Confederation of Professional Associations.</li>
+<li>One member proposed by the Confederation of Danish Employers.</li>
+<li>One member proposed jointly by the Confederation of Danish Employers and the Danish Agriculture &amp; Food Council.</li>
+<li>One member proposed by the Danish Employers’ Association for the Financial Sector.</li>
+<li>One member proposed collectively by Local Government Denmark (KL), the regions jointly and the Ministry of Taxation.</li>
+<li>One member proposed by the Danish Association of Managers and Executives.</li>
+<li>one member with special technical expertise appointed by the Technical University of Denmark.</li>
+<li>One member with special expertise within occupational health appointed by the Danish Ministry of Health and Development.</li>
+</ol>
+<p>(2) The chairman must be employed by the National Social Appeals Board and hold a masters of law degree.</p>
+<p>(3) The appointed members and their proxies, shall be appointed by the Minister for Employment for a term of four years, and they may be reappointed. If an appointment takes place within the four-year period, such appointment shall only apply until expiry of the period.</p>
+<p>(4) Rulings of the Council of Appeal on Health and Safety at Work are made by the chairman and the members duly appointed by the Council under subsection (1), nos. 1-7 or their proxies, cf. however subsection (5). Rulings are adopted by majority vote. In the event of parity of votes, the chairman shall have the casting vote. Each appointed member may attend with one or more observers without voting rights.</p>
+<p>(5) Decisions of the Council of Appeal on Health and Safety at Work in relation to rules issued in pursuance of section 9(2) regarding the approval of providers of occupational health and safety training and providers of occupational health and safety training for health and safety work coordinators within the building and construction sector shall be made by the chairman.</p>
+<p>(6) The chairman shall decide appeals against decisions by the Working Environment Authority on the right to inspect documents in cases in which the Working Environment Authority has made a decision pursuant to the Working Environment Act. <br /><br />(7) The chairman may make decisions on behalf of the Council in the following cases:</p>
+<ol>
+<li>Appeals which solely concern the time limit for compliance with notices under section 77(1).</li>
+<li>Decisions pursuant to section 81(3), 1st clause on withdrawal of the stay of proceedings of an appeal.</li>
+<li>Decisions pursuant to section 81(4) on the processing of an appeal submitted late.</li>
+</ol>
+<p>(8) The chairman may, upon written consultation of the appointed members of the Council, make decisions on behalf of the Council in cases where there is a fixed, recognised practice, or under other circumstances where there is no reason for doubt. <br /><br />(9) Members of the Council shall be informed of all appeals which are submitted to the Council for decision, and the members may request that a case be dealt with by the whole Council of Appeal. <br /><br />(10) The Council of Appeal on Health and Safety at Work shall, each year, issue a report on its activities to the Working Environment Council and the Minister for Employment. <br /><br />(11) The secretariat function of the Council of Appeal on Health and Safety at Work shall be carried out by the Social Appeals Board. <br /><br />(12) The Minister for Employment shall lay down the rules of procedure of the Council of Appeal on Health and Safety at Work. <br /><br /><strong>81b-(1)</strong> Appeals against a ruling made by a private enterprise authorised pursuant to section 74(5) can be brought before the Working Environment Authority within four weeks from the time at which the person concerned is notified of the ruling.</p>
+<h2 id="afs14a">Part 14a - Mandatory digital communication</h2>
+<p><strong>81c.-(1)</strong> The Minister for Employment can lay down regulations providing that written communications to and from the Working Environment Authority on matters covered by this Act shall be made in digital form. After consultation with the relevant minister, similar rules may be laid down for other public authorities which have functions under this Act.</p>
+<p>(2) The Minister for Employment may lay down more detailed rules on digital communication, including the use of certain IT systems, special digital formats and digital signatures, etc.</p>
+<p>(3) An electronic message shall be deemed to have reached the recipient when it is available to the recipient of the message.</p>
+<h2 id="afs15">Part 15 - Penalties</h2>
+<p><strong>82.-(1)</strong> Unless a more severe penalty is prescribed by other legislation, a person shall be liable to a fine or imprisonment of up to one year where he</p>
+<ol>
+<li>violates sections 15, 15a, 16, 17(1) and (2), 18, 19, 20(1), 20a(1), 21(1), 23, 25-34, 37(1) and (6), 38(1), 42(1), 45(1), 48(1), 63(5), 75(4), 76(1) or regulations of the European Community concerning matters covered by this Act,</li>
+<li>allows work to be carried out in contravention of Parts 9 and 10, manages or supervises such work, or carries out work in contravention of Part 9,</li>
+<li>fails to comply with an order pursuant to sections 77, 77a(1) or</li>
+<li>fails to submit information pursuant to section 22(2).</li>
+</ol>
+<p>(2) The penalty may be increased to imprisonment for up to two years in cases where a contravention has caused an accident resulting in serious personal injury or death.<br /><br />(3) When setting penalties under subsection (1), no. 1, it shall, insofar as the employer has discharged his duties pursuant to Part 4 of this Act, be considered aggravating circumstances that employees intentionally, or with gross negligence, contravene the legislative requirements concerning</p>
+<ol>
+<li>use of personal protective equipment,</li>
+<li>use of extraction and ventilation measures,</li>
+<li>use of protective equipment or safety measures,</li>
+<li>use of safe working methods, or</li>
+<li>certificates for cranes or fork-lift trucks.</li>
+</ol>
+<p>(4) Other than the cases mentioned in (3), when sentencing pursuant to (1) and (2), it shall be considered to be an aggravating circumstance </p>
+<ol>
+<li>that at the time of the violation, damage or injury to life or health, or causing danger of such damage or injury, if the situation is not covered by (2),</li>
+<li>that an order has previously been issued pursuant to section 77(1) or (2), or other decision made by the Danish Working Environment Authority regarding violation of the act for the same or similar situations,</li>
+<li>that at the time of the violation, a financial advantage was achieved or was attempted to be achieved for the person in question or others, or</li>
+<li>that the violation was committed intentionally or was due to gross negligence.</li>
+</ol>
+<p>(5) It shall be considered to be an aggravating circumstance </p>
+<ol>
+<li>that a person under the age of 18 has suffered an accident resulting in serious personal injury or death, cf. subsection (2),</li>
+<li>that a young person under the age of 18 has suffered injury or endangerment to their life or health, cf. subsection (4), no. 1,</li>
+<li>that several young persons have suffered injury or endangerment to their life or health, or</li>
+<li>that the natural or legal person concerned has within the previous four years been sanctioned once or several times for gross violation of working environment legislation.</li>
+</ol>
+<p>(6) In the event that an employer contravenes sections 15, 38(1), 42(1), 45(1), 48(1), Part 9 or Part 10, then when setting the fine, cf. subsections (1), (2), (4) and (5), due emphasis shall be placed on the size of the enterprise. Similarly, this shall also apply in the event of employer non-compliance with an improvement notice pursuant to sections 77 or 77a(1) which concerns these provisions.</p>
+<p>(7) If the benefits acquired through the contravention are not to be confiscated, fines and supplementary fines shall be set which take special account of the size of the benefits which were acquired or which were intended to be acquired. <br /><br />(8) Section 23 of the Danish Criminal Code concerning complicity shall apply to the liability to penalty referred to in subsections (1) and (2). <br /><br />(9) The time limits for liability to penalty shall be five years for contravention of sections 30-34, and for contravention of the regulations issued in pursuance of section 35. <br /><br /><strong>82a.-(1)</strong> In specific cases of contraventions of working environment regulations which are not judged to be subject to higher penalties than fines, the Minister for Employment may lay down regulations on how the Working Environment Authority may, in notification of a fine, declare that the case may be settled out of court. This shall applies if the party who has committed the contravention admits guilt and declares his willingness, within a given time limit, to pay the fine indicated in the notification of the fine. A condition for the individual employer being subject to a fine is that the contravention can be attributed to one or more persons attached to the enterprise, or the enterprise as such. <br /><br />(2) The provisions laid down in the Danish Administration of Justice Act on requirements concerning the content of indictments and on the right of the accused to remain silent, shall apply correspondingly to notifications of fines. <br /><br />(3) Further prosecution shall be discontinued on acceptance of a fine. <br /><br />(4) Accepted fines shall be recoverable by execution of a lien. <br /><br /><strong>83.-(1)</strong> In the case of contraventions of sections 15, 15a, 16, 38(1), 42(1), 45(1), 48(1), 82(1), nos. 2 and 3, the employer may be made liable for a fine even if the contravention cannot be attributed to the employer having acted with intent or negligence, cf. however subsection (3). A condition for the individual employer being subject to a fine is that the contravention can be attributed to one or more persons attached to the enterprise, or the enterprise as such. There shall be no imprisonment for default on fine payment for liability to pay a fine.<br /><br />(2) When setting the fine, section 82(2), (4) - (6) shall apply correspondingly. <br /><br />(3) Insofar as the employer has discharged his duties pursuant to Part 4 of this Act, the employer may not be made liable to a fine, if employees contravene the legislative requirements concerning</p>
+<ol>
+<li>use of personal protective equipment,</li>
+<li>use of extraction and ventilation measures,</li>
+<li>use of protective equipment or safety measures,</li>
+<li>use of safe working methods, or</li>
+<li>certificates for cranes or fork-lift trucks.</li>
+</ol>
+<p><strong>84.</strong> Regulations issued under the Act may provide for penalties or imprisonment of up to two years for a contravention of the provisions in regulations and improvement notices or prohibition notices pursuant to the regulations. Furthermore, it may also be laid down that an employer who violates provisions, an improvement notice or a prohibition notice as mentioned above may be liable to pay a fine even if the contravention cannot be attributed to the employer having acted with intent or negligence. A condition for the individual employer being subject to a fine is that the contravention can be attributed to one or more persons attached to the enterprise, or the enterprise as such. No imprisonment shall be determined in lieu of a fine.<br /><br /><strong>85.</strong> Liability to pay a fine under sections 83 and 84, 2nd clause may not be imposed on managers, etc., cf. section 23. <br /><br /><strong>86.</strong> Companies, etc. (legal persons) may incur criminal liability according to the regulations in chapter 5 of the Criminal Code. Section 83(3) shall apply correspondingly. <br /><br /><strong>87.</strong> Where young persons under the age of 18 are employed in contravention of the provisions of this Act or any rules laid down in pursuance of this Act, the parents or guardian may be liable to pay a fine if the work has been carried out with their knowledge. <br /><br /><strong>87a.</strong> (Repealed).</p>
+<h2 id="afs16">Part 16 - Entry into force etc.</h2>
+<p><strong>88.-(1)</strong> This Act shall enter into force on 1 July 1977. Section 13 shall enter into force on 1 May 1978.</p>
+<p>(2) (Omitted).<br /><br /><strong>89.-(1)</strong> Acts No. 226, 227 and 228 of 11 June 1954 on Health and Safety at Work (General), Health and Safety at Work (Commercial and Clerical Activities) and Health and Safety at Work (Agriculture, Forestry and Horticulture), respectively, shall be repealed. <br /><br />(2) In respect of matters on which more detailed regulations shall or may be laid down administratively under this Act, the Minister for Employment may direct that the relevant regulations in this regard in the Acts mentioned in subsection (1) shall remain in force, until they are replaced by provisions laid down pursuant to this Act. The same shall apply to regulations laid down in pursuance of the said Acts and to regulations which remain in force by virtue of section 76 of the Health and Safety at Work (General) Act. <br /><br />(3) Contravention of the provisions which remain in force under subsection (2) above shall be punishable by fine or imprisonment of up to two years. Sections 83 and 85-87 shall apply correspondingly. <br /><br /><strong>90.</strong> This Act shall not extend to the Faeroe Islands and Greenland.</p>
+<p><strong>Act No. 155 of 20 February 2013</strong> contains the following provisions:</p>
+<p><strong>Section 28.</strong> This Act shall enter into force on 1 July 2013.</p>
+<p><strong>Section 29</strong> The designations of private companies and public authorities to perform approval and control tasks in pursuance to the acts of the European Union made in pursuance to section 74(6) in the Working Environment Act remain in force following the entry into force of this Act.</p>
+<p><strong>Subsection (2)</strong>. Appeals against a decision taken prior to 1 July 2013 by a private company or a public authority appointed in pursuance of section 74(6) in the Working Environment Act can be brought before the Working Environment Authority pursuant to section 81b(2) in the Working Environment Act. Appeals against decisions made after 1 July 2013 will be processed in accordance with section 26 of this Act.</p>
+<hr />
+<p><strong>Act No. 238 of 18 March 2014</strong> (Obligatory Digital Communications)4) contains the following provisions:</p>
+<p><strong>Section 3</strong></p>
+<p><strong>Subsection (1)</strong>. This Act shall enter into force on 1 April 2014.</p>
+<p><strong>Subsection (2)</strong>. Rules issued in pursuance of section 75(5)-(7) of the Working Environment Act remain in force until they are repealed or replaced by rules issued in pursuance of section 81c of the Working Environment Act.</p>
+<hr />
+<p><strong>Act No. 1543 of 19 December 2017</strong> (Amendment of the Rules on Working Environment Certificates, Etc.)5) contains the following provisions:</p>
+<p><strong>Section 2.</strong></p>
+<p><strong>Subsection (1)</strong>. This Act shall enter into force on 1 January 2018.</p>
+<p><strong>Subsection (2)</strong> Section 1, nos. 3-6 do not apply to recognised working environment certificates issued prior to the Act’s entry into force. The rules in force to date shall apply for such certificates.</p>
+<p><strong>Subsection (3)</strong>. Rules laid down in pursuance of section 65b(3) and (4) of the Working Environment Act, cf. Executive Order No. 1084 of 19 September 2017, shall remain in force until they are repealed or replaced by regulations issued in pursuance of section 65b(4) and (5) of the Working Environment Act.</p>
+<hr />
+<p><strong>Act No. 1554 of 27 December 2019</strong> (Implementation of agreement on new and improved health and safety work and orderly conditions on the labour market, etc.)6) contains the following provisions:</p>
+<p><strong>Section 4</strong>.</p>
+<p><strong>Subsection (1)</strong>. This Act shall enter into force on 1 January 2020, cf. however subsections (2)-(4).</p>
+<p><strong>Subsection (2)</strong>. Section 1, nos. 30 and 33 enter into force on 1 September 2020.</p>
+<p><strong>Subsection (3)</strong>. Section 1, nos. 9, 11, 12, 31 and 32 enter into force on 1 April 2021.</p>
+<p><strong>Subsection (4)</strong>. Section 1, nos. 36 and 39 enter into force on 1 September 2021.</p>
+<hr />
+<p><strong>Act No. 1163 of 8 June 2021</strong> (Increased Investor Protection in Cross-Border Marketing of Investments and Strengthened Supervision with Actors on the Digital Market for Financial Services, Etc.) contains the following provisions regarding entry into force:</p>
+<p><strong>Section 16</strong>.</p>
+<p><strong>Subsection (1)</strong>. This Act shall enter into force on 1 July 2021, cf. however subsections (2) and (3).</p>
+<p><strong>Subsections (2)-(9)</strong>. (Omitted)</p>
+<p>The Danish Ministry of Employment, 16 November 2021</p>
+<p>Mattias Tesfaye / Sine Frederiksen<br /><br /></p>
+<p><sup>1) </sup>This Act contains provisions which implement Council Directive 89/391/EEC of 12 June 1989 on the introduction of measures to encourage improvements in the safety and health of workers at work, Official Journal of the European Union 1989, No. L 183, Page 1, with subsequent amendments, Council Directive 92/57/EEC of 24 June 1992 on the implementation of minimum safety and health requirements at temporary or mobile construction sites, Official Journal of the European Union 1992, No. L 245, Page 6, with subsequence amendments, certain provisions in Council Directive 94/33/EC of 22 June 1994 on the protection of young people at work, Official Journal of the European Union 1994, No. L 216, Page 12, with subsequent amendments, provisions which implement Directive 2003/88/EC of the European Parliament and of the Council of 4 November 2003 concerning certain aspects of the organisation of working time, Official Journal of the European Union 2003, No. L 299, Page 9, and provisions which implement Directive 2005/36/EC of the European Parliament and of the Council of 7 September 2005 on the recognition of professional qualifications, Official Journal of the European Union 2005, No. L 255, Page 22, with subsequent amendments, and Directive 2009/104/EC of the European Parliament and of the Council of 16 September 2009 concerning the minimum safety and health requirements for the use of work equipment by workers at work (second individual Directive within the meaning of Article 16(1) of Directive 89/391/EEC), Official Journal of the European Union 2009, No. L 260, Page 5.<br /><sup>2)</sup> The title of the Act was amended by Act No. 394 of 02/05/2016 which entered into force on 1 July 2016. The proper title of the Act is the Act on the Self-Governing Institution Labour Market Insurance.<br /><sup>3)</sup> The title of the Act was amended by Act No. 394 of 02/05/2016 which entered into force on 1 July 2016. The proper title of the Act is the Act on the Self-Governing Institution Labour Market Insurance.<br /><sup>4)</sup> The law amendment concerns section 75(5-7) and section 81c.<br /><sup>5)</sup> The law amendment concerns section 65b(1), 1st and 2nd clause, and subsections (3)-(5), section 65d, section 72a(3-4), section 78a(2), 2nd clause, section 81(7) and section 84, 2nd clause.<br /><sup>6)</sup> The law amendment concerns section 1(1), no. 1, section 1a, section 2(1) and (2), nos. 1 and 2, subsection (3), subsection (3), nos. 2 and 4, and subsection (4), section 13c, section 18, 2nd clause, section 21(2), section 52, 2nd clause, section 64(2), 1st clause, section 65b(3), section 65c(1), 1st and 2nd clause, and subsection (2), 1st and 2nd clause, section 65d, 1st and 2nd clause, section 66(2), section 67(1), nos. 2 and 7-9, section 68(1), section 68a(1), section 72(6-8), section 72a(1-5), section 74b, section 77a(1-2), section 77b, section 78, section 78b, section 78c, section 81a(1), nos. 2 and 6, section 82(1)-(2) and (5), no. 4, and section 83(1), 1st clause</p>
+
+</div>
+<!-- content:end -->            </div>
+
+
+                    </div>
+
+
+
+            </div>
+            <div class="cell large-auto detail-rightpanel">
+
+
+        <section data-sticky-container class="aside data-sticky-container">
+            <div id="main-content-index-container"
+                 class="main-content-index hide-for-print sticky show-for-large"
+                 data-margin-top="8"
+                 data-check-every="0"
+                 data-margin-bottom="0"
+                 data-sticky-on="large"
+                 data-sticky
+                 data-dynamic-height="false"
+                 data-top-anchor="bodytext:top"
+                 data-btm-anchor="bodytext:bottom">
+                <div class="main-content-index-container" data-render-type="standard" id="main-content-index">
+                    <h2>Contents</h2>
+                    <ol id="main-content-index__list" class="main-content-index__list">
+                    </ol>
+                    <button class="close-button hide-for-large" aria-label="Close Contents" type="button" data-close>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="main-content-index hide-for-print hide-for-large off-canvas position-right"
+                 id="modal-content-index-off-canvas"
+                 data-off-canvas
+                 data-auto-focus="false"
+                 data-force-top="false"
+                 data-trap-focus="true"
+                 data-check-every="0">
+                <div class="mobile-content-index-container" id="mobile-content-index-container">
+                    <div class="main-content-index-container">
+                        <h2>Contents</h2>
+                        <ol id="main-content-index__list-mobile" class="main-content-index__list new-guidance-rule-item-page">
+                        </ol>
+                    </div>
+                    <button class="close-button hide-for-large" aria-label="Luk Contents" type="button" data-close>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <button class="hide-for-large hide-for-print main-content-index-button" type="button" data-toggle="modal-content-index-off-canvas" data-sticky-on="large" aria-label="Contents"></button>
+
+            <button class="to-top-link sticky hide-for-large hide-for-print" id="to-top-link-mobile">
+                <figure class="">
+                    <svg class='icon'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/dist/svg/frontend-sprite.svg#icon-arrow'></use></svg>
+                </figure>
+                Til toppen
+            </button>
+        </section>        
+
+<script type="text/javascript" src="/dist/scripts/tableOfContents.js"></script>
+
+                    <button class="to-top-link to-top-link--fixed show-for-large hide-for-print sticky" data-stick-to="bottom" data-sticky-on="large" data-sticky data-dynamic-height="false" data-top-anchor="bodytext:top" data-btm-anchor="bodytext:bottom" id="to-top-link">
+                        <figure class="">
+                            <svg class='icon'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='/dist/svg/frontend-sprite.svg#icon-arrow'></use></svg>
+                        </figure>
+                        Til toppen
+                    </button>
+            </div>
+        </div>
+        <!-- content:end -->
+
+    </div>
+                    
+                    
+
+<div class="grid-container">
+    <div class="cell">
+        <div class="grid-x grid-margin-x grid-margin-y">
+            <div class="cell" style="margin-top: 0; text-align: right;">
+                <p><strong>Last revised:</strong> 29th of October 2020</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </main>
+
+            
+
+<!-- FOOTER-->
+<noindex>
+    <footer id="footer">
+        <div class="grid-container footer-content">
+            <img class="logo" src="/dist/images/at-logo-white.svg" alt="Arbejdstilsynet logo">
+            <div class="content-container">
+                <div class="generel-information-container">
+                    <p>Landskronagade 33<br>2100 København Ø</p>
+<p><strong>Contact us</strong></p>
+<p>Phone:&nbsp;<strong><a href="tel:70121288">70 12 12 88</a></strong> <br>Monday - Thursday: 8-15&nbsp;<br>Friday: 8-14</p>
+<p>E-mail: <strong><a href="mailto:at@at.dk">at@at.dk</a></strong></p>
+<p>EAN: 5798000394513<br>CVR: 21481815</p>
+                </div>
+                    <div class="column">
+                        
+
+<div class="footer-links-container">
+        <p class="title">About us</p>
+
+            <a href="/en/about-us/about-arbejdstilsynet/">About Arbejdstilsynet</a>
+            <a href="/en/about-us/about-the-website/">About the website</a>
+            <a href="/en/about-us/contact-us/">Contact us</a>
+</div>
+                    </div>
+                    <div class="column">
+                        
+
+<div class="footer-links-container">
+        <p class="title">Self-service</p>
+
+            <a href="/en/self-service/apply-for-recognition-of-foreign-qualifications/">Apply for recognition of foreign qualifications</a>
+            <a href="/en/self-service/report-a-work-accident/">Report a work accident</a>
+</div>
+<div class="footer-dropdown">
+        <button class="drop-down-button">
+            More
+            <span class="arrow-icon"></span>
+        </button>
+        <div class="drop-down-content-container">
+            <div class="drop-down-content">
+
+                    <a href="/en/self-service/report-construction-and-building-work/">Report construction and building work</a>
+                    <a href="/en/self-service/inform-the-authority-of-the-lack-of-notifying-rut/">Inform the Authority of the lack of notifying RUT</a>
+                    <a href="/en/self-service/report-work-with-asbestos/">Report work with asbestos</a>
+            </div>
+        </div>
+</div>
+<div class="footer-links-container">
+        <p class="title">Our other websites</p>
+
+            <a href="https://workplacedenmark.dk" target="_blank">workplacedenmark.dk</a>
+            <a href="https://offshore.at.dk" target="_blank">offshore.at.dk</a>
+</div>
+                    </div>
+            </div>
+            <div class="footer-service-menu">
+                <div class="social-media">
+                </div>
+                <div class="navigation-links">
+                        <a href="https://www.was.digst.dk/at-dk" target="_blank">Web Accessibility Statement</a>
+                        <a href="/en/about-us/gdpr/">GDPR</a>
+                        <a href="/en/about-us/about-the-website/cookies/">Cookies</a>
+                </div>
+                <div class="language-links">
+                        <a href="/" aria-label="Danish" target="_self">
+                            <span class="flag flag-dk"></span>
+                        </a>
+
+                    <a href="https://at.gl/" aria-label="Kalaallisut" target="_blank">
+                        <span class="flag flag-kl"></span>
+                    </a>
+                </div>
+            </div >
+        </div >
+        <div class="hotline-container">
+            <div class="grid-container hotline-content">
+                <a class="hotline-number" href="tel:70 12 12 88">
+                    <svg class="svg-icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                             xlink:href="/dist/svg/frontend-sprite.svg#icon-phone-ringing">
+                        </use>
+                    </svg >
+                    70 12 12 88
+                </a>
+                <p> I tilf&#xE6;lde af akutte eller alvorlige overtr&#xE6;delser af arbejdsmilj&#xF8;loven eller alvorlige ulykker kan Arbejdstilsynet kontaktes uden for almindelig arbejdstid &#x2013; f&#xF8;lg anvisningen p&#xE5; telefonsvareren. </p>
+            </div>
+        </div>
+    </footer>
+</noindex>
+<script>
+        $(document).ready(function() {
+        $('.drop-down-button').click(function() {
+            var $dropdownButton = $(this);
+            var $dropdownContent = $dropdownButton.next('.drop-down-content-container');
+            
+            // Close all other dropdowns
+            $('.drop-down-content-container').not($dropdownContent).hide();
+            $('.drop-down-button').not($dropdownButton).removeClass('active');
+            
+            // Toggle the current dropdown
+            $dropdownButton.toggleClass('active');
+            $dropdownContent.toggle();
+            
+            event.stopPropagation();
+        });
+		
+        $(document).click(function() {
+            $('.drop-down-content-container').hide();
+            $('.drop-down-button').removeClass('active');
+        });
+    });
+</script >
+        </div>
+    </div>
+    <div class="reveal" id="pdfLoadingModal" data-reveal data-close-on-click="false" data-animation-in="fade-in" data-animation-out="fade-out">
+        <div class="text-center">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h3>Henter PDF</h3>
+        </div>
+
+        <button class="close-button" data-close aria-label="TODO" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    
+    <div class="reveal" id="pdfShareModal" data-reveal data-close-on-click="false" data-animation-in="fade-in" data-animation-out="fade-out">
+        <div id="share-pdf"></div>
+        <script type="text/javascript" src="/dist/scripts/vue/share-pdf.js?v=43151c387c927e70702d3ce388bbe239"></script>
+
+    </div>
+    
+
+    
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/dist/scripts/app.js?v=08c01a5c51e0f4672e6c6785ba5a8892"></script>
+    <script type="text/javascript" src="/dist/vendor.js?v=a06aa1f6290b4b790a1f43bd71a111ee"></script>
+    <script type="text/javascript" src="/dist/scripts/main.js?v=dc03b519e876d1712bd9e099371e5b46"></script>
+
+<script async src="https://at.dk/media/ni0a5slt/siteanalyze_273720.js"></script>
+<script id="MathJax-script" async src="https://at.dk/media/x2bfzlrs/tex-mml-chtml.js"></script>    <script src="/dist/scripts/bluebird.min.js"></script>
+    <script src="/dist/scripts/fetch.js"></script>
+
+<script>
+        var isAuthenticated = JSON.parse(localStorage.getItem('mit-at-logged-in'));
+        if (isAuthenticated) {            
+            var alias = "knowledgeAboutItemPage";
+            var allowedDocTypes = ["mitAtPage","startPage","error404Page","searchPage","rulesMainPage","rulesListPage","newsListPage","guidanceRulesListPage","announcementRulesListPage","lawsRulesListPage","verdictsRulesListPage","faqSearchPage","toolListPage"];
+            var isDocTypedAllowed = allowedDocTypes.indexOf(alias) === -1;
+
+            if (isDocTypedAllowed) {
+                var lastVisitedPages = localStorage.getItem('lastVisitedPages');
+                var pageObject = { "id": 33806, "date": new Date().toISOString() };
+
+                if (lastVisitedPages) {
+                    var lvpAsArr = JSON.parse(lastVisitedPages);
+                    // Remove if page id alreayd exist
+                    lvpAsArr = lvpAsArr.filter(item => item.id !== 33806);
+
+                    // Add page id to front of array
+                    lvpAsArr.unshift(pageObject);
+
+                    // Only store X items - Else remove last item
+                    var maxSize = 20;
+                    if (lvpAsArr.length > maxSize) {
+                        lvpAsArr.pop();
+                    }
+
+                    // Save array
+                    localStorage.setItem('lastVisitedPages', JSON.stringify(lvpAsArr));
+                } else {
+
+                    // Create lastVisitedPages array
+                    var arr = [];
+                    arr.push(pageObject);
+                    localStorage.setItem('lastVisitedPages', JSON.stringify(arr));
+                }
+            }
+			
+        }
+        let loggedIn = false
+        if (loggedIn) {
+            fetch('api/mitat/users/logActivity', {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+            })
+        }
+    </script>
+<!-- Version: 2.2.0.55 -->
+<!-- Date: 15. juli 2025 16:30:52 -->
+</body>
+</html>
