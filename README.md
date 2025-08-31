@@ -43,10 +43,10 @@ Data/
 │   └── results/                    # Analysis outputs and statistical results
 │
 └── Raw Data Files/
-    ├── GREEN_BONDS_RAW_DATA.csv    # 23,569 bond records from Refinitiv
-    ├── GREEN_LOANS_RAW_DATA.csv    # 6,899 loan records from Refinitiv
+    ├── GREEN_BONDS_RAW_DATA.csv    # Included on request -- 23,569 bond records from Refinitiv
+    ├── GREEN_LOANS_RAW_DATA.csv    # Included on request -- 6,899 loan records from Refinitiv
     ├── SBTiTargetDashboard30082025.xlsx # SBTi targets database
-    └── SUSTAINABILITY_LINKED_LOANS.xlsx # SLL market data
+    └── SUSTAINABILITY_LINKED_LOANS.xlsx # Included on request -- SLL market data
 ```
 
 ## Code Organization
